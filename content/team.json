@@ -10,11 +10,11 @@
     },
     {
       "id": "chercheur-1",
-      "name": "M. Benatia",
-      "role": "Chercheur postdoctoral",
+      "name": "Pr BADE Rabé",
+      "role": "Enseignant-Chercheur",
       "field": "Calcul scientifique haute performance",
       "bio": "Conçoit des méthodes de volumes finis parallélisées pour la simulation d'écoulements sur grands maillages.",
-      "email": "m.benatia@mfa.univ-exemple.fr"
+      "email": "baderabe@yahoo.fr"
     },
     {
       "id": "doctorant-1",
