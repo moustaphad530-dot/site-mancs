@@ -9,8 +9,11 @@
 # ============================================================
 
 backend:
-  name: git-gateway
-  branch: main
+     name: git-gateway
+     repo: moustaphad530-dot/site-mancs
+     branch: main
+     identity_url: https://auth.decapbridge.com/sites/4cbb053a-85bf-4696-bd5f-592dc2c4d70e
+     gateway_url: https://gateway.decapbridge.com
 
 media_folder: "images"
 public_folder: "/images"
