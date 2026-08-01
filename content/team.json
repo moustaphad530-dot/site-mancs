@@ -23,30 +23,6 @@
       "field": "Analyse numérique",
       "bio": "Thème sur les schémas d'ordre élevé pour les lois de conservation hyperboliques et l'utilisation des problèmes inverses.",
       "email": "ali.abanimaidaoua@uddm.edu.ne"
-    },
-    {
-      "id": "doctorant-2",
-      "name": "S. Girard",
-      "role": "Doctorant (1re année)",
-      "field": "Probabilités numériques",
-      "bio": "Étudie les méthodes de Monte-Carlo multi-niveaux pour la modélisation stochastique.",
-      "email": "s.girard@mfa.univ-exemple.fr"
-    },
-    {
-      "id": "ingenieur-1",
-      "name": "K. Haidara",
-      "role": "Ingénieur de calcul scientifique",
-      "field": "Calcul haute performance",
-      "bio": "Maintient les codes de simulation et l'accès aux moyens de calcul parallèle du laboratoire.",
-      "email": "k.haidara@mfa.univ-exemple.fr"
-    },
-    {
-      "id": "chercheur-2",
-      "name": "P. Rousseau",
-      "role": "Chargé de recherche",
-      "field": "Optimisation et contrôle",
-      "bio": "Travaille sur le contrôle optimal de systèmes gouvernés par des équations d'évolution.",
-      "email": "p.rousseau@mfa.univ-exemple.fr"
     }
   ]
 }
