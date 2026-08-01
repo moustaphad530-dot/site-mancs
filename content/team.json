@@ -2,11 +2,11 @@
   "entries": [
     {
       "id": "responsable-labo",
-      "name": "Dr. C. Lefèvre",
-      "role": "Directrice de recherche",
+      "name": "Pr SALEY Bisso",
+      "role": "Directeur du Laboratoire",
       "field": "Analyse des équations aux dérivées partielles",
       "bio": "Dirige l'équipe MANCS depuis 2019. Travaux sur l'existence et la stabilité des solutions d'EDP non linéaires.",
-      "email": "c.lefevre@mfa.univ-exemple.fr"
+      "email": "bsaley@gmail.com"
     },
     {
       "id": "chercheur-1",
