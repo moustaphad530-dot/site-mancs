@@ -1,0 +1,79 @@
+# ============================================================
+# Configuration de l'éditeur de contenu (Decap CMS)
+# ============================================================
+# Étapes d'activation : voir la section "Édition sans code" du README.md
+#   1. Déployer le site sur Netlify
+#   2. Activer Netlify Identity + Git Gateway
+#   3. Remplacer "repo" ci-dessous par votre dépôt GitHub réel
+#   4. Inviter vos collègues comme utilisateurs Netlify Identity
+# ============================================================
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "team"
+    label: "Équipe"
+    label_singular: "Membre"
+    file: "content/team.json"
+    format: "json"
+    fields:
+      - { name: entries, label: "Membres", widget: list, fields: [
+          { name: id, label: "Identifiant (unique, sans espace)", widget: string },
+          { name: name, label: "Nom", widget: string },
+          { name: role, label: "Rôle", widget: string },
+          { name: field, label: "Domaine de recherche", widget: string },
+          { name: bio, label: "Bio courte", widget: text },
+          { name: email, label: "E-mail", widget: string },
+        ]}
+
+  - name: "publications"
+    label: "Publications"
+    label_singular: "Publication"
+    file: "content/publications.json"
+    format: "json"
+    fields:
+      - { name: entries, label: "Publications", widget: list, fields: [
+          { name: id, label: "Identifiant (unique)", widget: string },
+          { name: year, label: "Année", widget: number, value_type: int },
+          { name: title, label: "Titre", widget: string },
+          { name: authors, label: "Auteurs", widget: string },
+          { name: venue, label: "Revue / conférence", widget: string },
+          { name: link, label: "Lien (PDF, DOI…)", widget: string, required: false },
+          { name: tags, label: "Mots-clés", widget: list, required: false },
+        ]}
+
+  - name: "projects"
+    label: "Projets"
+    label_singular: "Projet"
+    file: "content/projects.json"
+    format: "json"
+    fields:
+      - { name: entries, label: "Projets", widget: list, fields: [
+          { name: id, label: "Identifiant (unique)", widget: string },
+          { name: title, label: "Titre du projet", widget: string },
+          { name: status, label: "Statut", widget: select, options: ["active", "completed"] },
+          { name: summary, label: "Résumé", widget: text },
+          { name: lead, label: "Responsable", widget: string },
+          { name: tags, label: "Mots-clés", widget: list, required: false },
+          { name: link, label: "Lien", widget: string, required: false },
+        ]}
+
+  - name: "posts"
+    label: "Actualités"
+    label_singular: "Actualité"
+    file: "content/posts.json"
+    format: "json"
+    fields:
+      - { name: entries, label: "Actualités", widget: list, fields: [
+          { name: id, label: "Identifiant (unique)", widget: string },
+          { name: date, label: "Date", widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false },
+          { name: title, label: "Titre", widget: string },
+          { name: excerpt, label: "Résumé court", widget: text },
+          { name: body, label: "Texte complet", widget: text },
+          { name: author, label: "Auteur", widget: string },
+        ]}

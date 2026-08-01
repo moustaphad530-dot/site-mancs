@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mathématiques Fondamentales et Applications — Équipe MANCS</title>
+<meta name="description" content="Équipe Modélisation, Analyse Numérique et Calcul Scientifique : membres, publications, projets et actualités." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="mark">Mathématiques Fondamentales et Applications</span>
+      <span class="name">Équipe MANCS</span>
+    </a>
+    <nav class="primary-nav" aria-label="Navigation principale">
+      <a href="index.html" aria-current="page">Accueil</a>
+      <a href="equipe.html">Équipe</a>
+      <a href="publications.html">Publications</a>
+      <a href="projets.html">Projets</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">≡</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow">Équipe Modélisation, Analyse Numérique et Calcul Scientifique — depuis 2019</p>
+        <h1>Nous transformons des équations en méthodes, et des méthodes en calculs qui tiennent leurs promesses.</h1>
+        <p class="lede" style="margin-top:20px">
+          Une équipe de mathématiciennes et mathématiciens travaillant sur l'analyse des équations aux dérivées
+          partielles, la conception de schémas numériques et le calcul scientifique haute performance, avec pour
+          ambition de produire des méthodes aussi rigoureuses que réellement calculables.
+        </p>
+        <div style="margin-top:28px; display:flex; gap:12px; flex-wrap:wrap;">
+          <a href="publications.html" class="btn primary">Voir les publications</a>
+          <a href="equipe.html" class="btn">Rencontrer l'équipe</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-stat">
+          <div class="value" id="stat-team-count">—</div>
+          <div class="label">Membres actifs</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value" id="stat-pub-count">—</div>
+          <div class="label">Publications</div>
+        </div>
+        <div class="hero-stat">
+          <div class="value" id="stat-proj-count">—</div>
+          <div class="label">Projets en cours</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="marginalia">Dernières publications</span>
+          <h2 style="margin-top:14px">Ce que nous publions</h2>
+        </div>
+        <a href="publications.html" class="link-arrow">Toutes les publications →</a>
+      </div>
+      <div id="home-pub-preview" class="pub-list">
+        <div class="empty-state">Chargement…</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <section>
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="marginalia">Journal du laboratoire</span>
+          <h2 style="margin-top:14px">Actualités récentes</h2>
+        </div>
+        <a href="actualites.html" class="link-arrow">Toutes les actualités →</a>
+      </div>
+      <div id="home-post-preview" class="post-list">
+        <div class="empty-state">Chargement…</div>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
+  <section>
+    <div class="wrap" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;">
+      <div>
+        <h2>Vous voulez rejoindre l'équipe ?</h2>
+        <p class="muted mt-0" style="margin-top:10px">Nous publions nos offres de stage, thèse et postdoctorat sur la page contact.</p>
+      </div>
+      <a href="contact.html" class="btn primary">Nous contacter</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <span>© <span id="year"></span> Mathématiques Fondamentales et Applications</span>
+    <span>Bâtiment de Mathématiques, Bureau 3.14</span>
+    <a href="mailto:contact@mfa.univ-exemple.fr">contact@mfa.univ-exemple.fr</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

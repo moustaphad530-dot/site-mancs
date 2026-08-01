@@ -1,0 +1,52 @@
+{
+  "entries": [
+    {
+      "id": "responsable-labo",
+      "name": "Dr. C. Lefèvre",
+      "role": "Directrice de recherche",
+      "field": "Analyse des équations aux dérivées partielles",
+      "bio": "Dirige l'équipe MANCS depuis 2019. Travaux sur l'existence et la stabilité des solutions d'EDP non linéaires.",
+      "email": "c.lefevre@mfa.univ-exemple.fr"
+    },
+    {
+      "id": "chercheur-1",
+      "name": "M. Benatia",
+      "role": "Chercheur postdoctoral",
+      "field": "Calcul scientifique haute performance",
+      "bio": "Conçoit des méthodes de volumes finis parallélisées pour la simulation d'écoulements sur grands maillages.",
+      "email": "m.benatia@mfa.univ-exemple.fr"
+    },
+    {
+      "id": "doctorant-1",
+      "name": "L. Petit",
+      "role": "Doctorante (3e année)",
+      "field": "Analyse numérique",
+      "bio": "Thèse sur les schémas d'ordre élevé pour les lois de conservation hyperboliques.",
+      "email": "l.petit@mfa.univ-exemple.fr"
+    },
+    {
+      "id": "doctorant-2",
+      "name": "S. Girard",
+      "role": "Doctorant (1re année)",
+      "field": "Probabilités numériques",
+      "bio": "Étudie les méthodes de Monte-Carlo multi-niveaux pour la modélisation stochastique.",
+      "email": "s.girard@mfa.univ-exemple.fr"
+    },
+    {
+      "id": "ingenieur-1",
+      "name": "K. Haidara",
+      "role": "Ingénieur de calcul scientifique",
+      "field": "Calcul haute performance",
+      "bio": "Maintient les codes de simulation et l'accès aux moyens de calcul parallèle du laboratoire.",
+      "email": "k.haidara@mfa.univ-exemple.fr"
+    },
+    {
+      "id": "chercheur-2",
+      "name": "P. Rousseau",
+      "role": "Chargé de recherche",
+      "field": "Optimisation et contrôle",
+      "bio": "Travaille sur le contrôle optimal de systèmes gouvernés par des équations d'évolution.",
+      "email": "p.rousseau@mfa.univ-exemple.fr"
+    }
+  ]
+}

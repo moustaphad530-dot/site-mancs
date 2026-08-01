@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — Mathématiques Fondamentales et Applications</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">
+      <span class="mark">Mathématiques Fondamentales et Applications</span>
+      <span class="name">Équipe MANCS</span>
+    </a>
+    <nav class="primary-nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="equipe.html">Équipe</a>
+      <a href="publications.html">Publications</a>
+      <a href="projets.html">Projets</a>
+      <a href="actualites.html">Actualités</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">≡</button>
+  </div>
+</header>
+
+<main>
+  <section class="tight" style="padding-top:56px;">
+    <div class="wrap">
+      <span class="marginalia">Contact &amp; recrutement</span>
+      <h1 style="margin-top:16px; font-size:clamp(32px,4vw,46px)">Nous contacter</h1>
+      <p class="lede" style="margin-top:16px">
+        Question sur nos travaux, proposition de collaboration, ou candidature pour un stage, une thèse
+        ou un poste postdoctoral : écrivez-nous.
+      </p>
+    </div>
+  </section>
+
+  <section class="tight">
+    <div class="wrap" style="display:grid; grid-template-columns: 1fr 1fr; gap:56px;">
+      <div>
+        <h2 style="font-size:24px">Écrivez-nous</h2>
+        <form class="form-grid" style="margin-top:24px" name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="form-name" value="contact" />
+          <div>
+            <label for="name">Nom</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div>
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div class="full">
+            <label for="subject">Sujet</label>
+            <select id="subject" name="subject">
+              <option>Question sur nos travaux</option>
+              <option>Proposition de collaboration</option>
+              <option>Candidature — stage</option>
+              <option>Candidature — thèse</option>
+              <option>Candidature — postdoctorat</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="full">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="full">
+            <button type="submit" class="btn primary">Envoyer le message</button>
+          </div>
+        </form>
+        <p class="muted" style="font-size:12.5px; margin-top:14px">
+          Ce formulaire est pré-configuré pour Netlify Forms (gratuit). Voir le README pour l'activer,
+          ou remplacez l'attribut <code>action</code> par un service comme Formspree si vous hébergez ailleurs.
+        </p>
+      </div>
+
+      <div>
+        <h2 style="font-size:24px">Coordonnées</h2>
+        <div style="margin-top:24px; display:flex; flex-direction:column; gap:18px;">
+          <div>
+            <div class="mono-tag">Adresse</div>
+            <p class="mt-0">Bâtiment de Mathématiques, Bureau 3.14<br />1 avenue de l'Université<br />00000 Ville, Pays</p>
+          </div>
+          <div>
+            <div class="mono-tag">E-mail général</div>
+            <p class="mt-0"><a class="link-arrow" href="mailto:contact@mfa.univ-exemple.fr">contact@mfa.univ-exemple.fr</a></p>
+          </div>
+          <div>
+            <div class="mono-tag">Recrutement</div>
+            <p class="mt-0">Consultez nos offres en cours sur la page <a class="link-arrow" href="actualites.html">Actualités</a>, ou écrivez directement à la responsable concernée sur la page <a class="link-arrow" href="equipe.html">Équipe</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <span>© <span id="year"></span> Mathématiques Fondamentales et Applications</span>
+    <span>Bâtiment de Mathématiques, Bureau 3.14</span>
+    <a href="mailto:contact@mfa.univ-exemple.fr">contact@mfa.univ-exemple.fr</a>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

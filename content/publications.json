@@ -1,0 +1,49 @@
+{
+  "entries": [
+    {
+      "id": "pub-2026-01",
+      "year": 2026,
+      "title": "Schémas d'ordre élevé pour les lois de conservation hyperboliques sur maillages non structurés",
+      "authors": "Petit, L., Lefèvre, C.",
+      "venue": "Congrès francophone d'analyse numérique",
+      "link": "#",
+      "tags": ["analyse numérique", "EDP hyperboliques"]
+    },
+    {
+      "id": "pub-2025-04",
+      "year": 2025,
+      "title": "Méthodes de Monte-Carlo multi-niveaux pour les équations différentielles stochastiques",
+      "authors": "Girard, S., Rousseau, P.",
+      "venue": "Revue internationale de probabilités appliquées",
+      "link": "#",
+      "tags": ["probabilités numériques", "modélisation stochastique"]
+    },
+    {
+      "id": "pub-2025-02",
+      "year": 2025,
+      "title": "Existence et stabilité de solutions faibles pour une classe d'EDP non linéaires",
+      "authors": "Lefèvre, C.",
+      "venue": "Journal d'analyse mathématique",
+      "link": "#",
+      "tags": ["EDP", "analyse fonctionnelle"]
+    },
+    {
+      "id": "pub-2024-09",
+      "year": 2024,
+      "title": "Parallélisation à grande échelle d'un solveur de volumes finis pour la mécanique des fluides",
+      "authors": "Benatia, M., Haidara, K.",
+      "venue": "Actes du colloque de calcul scientifique haute performance",
+      "link": "#",
+      "tags": ["calcul scientifique", "HPC"]
+    },
+    {
+      "id": "pub-2024-03",
+      "year": 2024,
+      "title": "Contrôle optimal de systèmes gouvernés par des équations d'évolution linéaires",
+      "authors": "Rousseau, P.",
+      "venue": "Revue d'optimisation et de contrôle",
+      "link": "#",
+      "tags": ["optimisation", "contrôle"]
+    }
+  ]
+}
