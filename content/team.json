@@ -23,6 +23,14 @@
       "field": "Analyse numérique",
       "bio": "Thème sur les schémas d'ordre élevé pour les lois de conservation hyperboliques et l'utilisation des problèmes inverses.",
       "email": "ali.abanimaidaoua@uddm.edu.ne"
+    },
+    {
+      "id": "Chercheur- 2",
+      "name": "Dr ABBA MAHAMANE Oumarou",
+      "role": "Enseignant-Chercheur, membre permanent",
+      "field": "Mathématiques Modelling, Optimization, Biomathematics",
+      "bio": "Utilisation des Equations aux Dérivées Partielles (EDP) pour la résolution des problèmes récurrents sur la santé.",
+      "email": "omarab2005@yahoo.fr"
     }
   ]
 }
