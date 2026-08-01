@@ -2,75 +2,8 @@ backend:
   name: git-gateway
   repo: moustaphad530-dot/site-mancs
   branch: main
-  identity_url: https://auth.decapbridge.com/sites/4cbb053a-85bf-4696-bd5f-592dc2c4d70e
+  auth_type: pkce
+  base_url: https://auth.decapbridge.com
+  auth_endpoint: /sites/4cbb053a-85bf-4696-bd5f-592dc2c4d70e/pkce
+  auth_token_endpoint: /sites/4cbb053a-85bf-4696-bd5f-592dc2c4d70e/token
   gateway_url: https://gateway.decapbridge.com
-
-media_folder: "images"
-public_folder: "/images"
-
-collections:
-  - name: "team"
-    label: "Équipe"
-    files:
-      - name: "entries"
-        label: "Membres"
-        file: "content/team.json"
-        fields:
-          - { name: entries, label: "Membres", widget: list, fields: [
-              { name: id, label: "Identifiant (unique, sans espace)", widget: string },
-              { name: name, label: "Nom", widget: string },
-              { name: role, label: "Rôle", widget: string },
-              { name: field, label: "Domaine de recherche", widget: string },
-              { name: bio, label: "Bio courte", widget: text },
-              { name: email, label: "E-mail", widget: string },
-            ]}
-
-  - name: "publications"
-    label: "Publications"
-    files:
-      - name: "entries"
-        label: "Publications"
-        file: "content/publications.json"
-        fields:
-          - { name: entries, label: "Publications", widget: list, fields: [
-              { name: id, label: "Identifiant (unique)", widget: string },
-              { name: year, label: "Année", widget: number, value_type: int },
-              { name: title, label: "Titre", widget: string },
-              { name: authors, label: "Auteurs", widget: string },
-              { name: venue, label: "Revue / conférence", widget: string },
-              { name: link, label: "Lien (PDF, DOI…)", widget: string, required: false },
-              { name: tags, label: "Mots-clés", widget: list, required: false },
-            ]}
-
-  - name: "projects"
-    label: "Projets"
-    files:
-      - name: "entries"
-        label: "Projets"
-        file: "content/projects.json"
-        fields:
-          - { name: entries, label: "Projets", widget: list, fields: [
-              { name: id, label: "Identifiant (unique)", widget: string },
-              { name: title, label: "Titre du projet", widget: string },
-              { name: status, label: "Statut", widget: select, options: ["active", "completed"] },
-              { name: summary, label: "Résumé", widget: text },
-              { name: lead, label: "Responsable", widget: string },
-              { name: tags, label: "Mots-clés", widget: list, required: false },
-              { name: link, label: "Lien", widget: string, required: false },
-            ]}
-
-  - name: "posts"
-    label: "Actualités"
-    files:
-      - name: "entries"
-        label: "Actualités"
-        file: "content/posts.json"
-        fields:
-          - { name: entries, label: "Actualités", widget: list, fields: [
-              { name: id, label: "Identifiant (unique)", widget: string },
-              { name: date, label: "Date", widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false },
-              { name: title, label: "Titre", widget: string },
-              { name: excerpt, label: "Résumé court", widget: text },
-              { name: body, label: "Texte complet", widget: text },
-              { name: author, label: "Auteur", widget: string },
-            ]}
