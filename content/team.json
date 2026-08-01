@@ -17,12 +17,12 @@
       "email": "baderabe@yahoo.fr"
     },
     {
-      "id": "doctorant-1",
-      "name": "L. Petit",
-      "role": "Doctorante (3e année)",
+      "id": "Chercheur- 2",
+      "name": "ABANI MADAOUA Ali",
+      "role": "Enseignant-Chercheur",
       "field": "Analyse numérique",
-      "bio": "Thèse sur les schémas d'ordre élevé pour les lois de conservation hyperboliques.",
-      "email": "l.petit@mfa.univ-exemple.fr"
+      "bio": "Thème sur les schémas d'ordre élevé pour les lois de conservation hyperboliques et l'utilisation des problèmes inverses.",
+      "email": "ali.abanimaidaoua@uddm.edu.ne"
     },
     {
       "id": "doctorant-2",
