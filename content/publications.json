@@ -3,11 +3,21 @@
     {
       "id": "pub-2026-01",
       "year": 2026,
-      "title": "Schémas d'ordre élevé pour les lois de conservation hyperboliques sur maillages non structurés",
-      "authors": "Petit, L., Lefèvre, C.",
-      "venue": "Congrès francophone d'analyse numérique",
-      "link": "#",
-      "tags": ["analyse numérique", "EDP hyperboliques"]
+      "title": "Mathematical Analysis and Simulation of an Age- Structured Model with Two-Patch and an Uncontrolled Migration: Application to Tuberculosis",
+      "authors": "Badjo Kimba Abdoul Wahid, Djibo Moustapha, Saley Bisso",
+      "venue": "EUROPEAN JOURNAL OF PURE AND APPLIED MATHEMATICS",
+      "link": "",
+      "tags": [
+        "Age-structured",
+        "reproductive number",
+        "two-patch",
+        "tuberculosis",
+        "stability",
+        "migration",
+        "simulation",
+        "uncontrolled",
+        "endemic"
+      ]
     },
     {
       "id": "pub-2025-04",
@@ -16,7 +26,10 @@
       "authors": "Girard, S., Rousseau, P.",
       "venue": "Revue internationale de probabilités appliquées",
       "link": "#",
-      "tags": ["probabilités numériques", "modélisation stochastique"]
+      "tags": [
+        "probabilités numériques",
+        "modélisation stochastique"
+      ]
     },
     {
       "id": "pub-2025-02",
@@ -25,7 +38,10 @@
       "authors": "Lefèvre, C.",
       "venue": "Journal d'analyse mathématique",
       "link": "#",
-      "tags": ["EDP", "analyse fonctionnelle"]
+      "tags": [
+        "EDP",
+        "analyse fonctionnelle"
+      ]
     },
     {
       "id": "pub-2024-09",
@@ -34,7 +50,10 @@
       "authors": "Benatia, M., Haidara, K.",
       "venue": "Actes du colloque de calcul scientifique haute performance",
       "link": "#",
-      "tags": ["calcul scientifique", "HPC"]
+      "tags": [
+        "calcul scientifique",
+        "HPC"
+      ]
     },
     {
       "id": "pub-2024-03",
@@ -43,7 +62,10 @@
       "authors": "Rousseau, P.",
       "venue": "Revue d'optimisation et de contrôle",
       "link": "#",
-      "tags": ["optimisation", "contrôle"]
+      "tags": [
+        "optimisation",
+        "contrôle"
+      ]
     }
   ]
 }
