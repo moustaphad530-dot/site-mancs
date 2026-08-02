@@ -1,39 +1,48 @@
 {
   "entries": [
     {
-      "id": "proj-schemeshd",
+      "id": "proj-1",
       "title": "SCHEMES-HD",
       "status": "active",
       "summary": "Conception de schémas numériques d'ordre élevé pour les lois de conservation, avec applications en dynamique des fluides.",
-      "lead": "L. Petit",
-      "tags": ["analyse numérique", "financement ANR"],
+      "lead": "S. Bisso",
+      "tags": [
+        "analyse numérique"
+      ],
       "link": "#"
     },
     {
-      "id": "proj-hpcedp",
+      "id": "proj-2",
       "title": "HPC-EDP",
       "status": "active",
       "summary": "Portage et optimisation de solveurs d'équations aux dérivées partielles sur architectures de calcul parallèle.",
-      "lead": "M. Benatia",
-      "tags": ["calcul haute performance"],
+      "lead": "B. Rabé",
+      "tags": [
+        "calcul haute performance"
+      ],
       "link": "#"
     },
     {
-      "id": "proj-stocham",
+      "id": "proj-3",
       "title": "STOCHAM",
       "status": "active",
       "summary": "Développement de méthodes numériques pour la simulation de systèmes stochastiques en grande dimension.",
-      "lead": "S. Girard",
-      "tags": ["probabilités numériques"],
+      "lead": "A. M. Hassane",
+      "tags": [
+        "probabilités numériques"
+      ],
       "link": "#"
     },
     {
-      "id": "proj-opticontrol",
-      "title": "OPTICONTROL",
-      "status": "completed",
-      "summary": "Étude théorique et numérique du contrôle optimal pour des équations d'évolution non linéaires. Projet clôturé en 2025.",
-      "lead": "P. Rousseau",
-      "tags": ["optimisation", "contrôle"],
+      "id": "proj-biomathematics",
+      "title": "Santé publique",
+      "status": "active",
+      "summary": "Étude théorique et numérique du contrôle optimal pour des équations d'évolution non linéaires appliquée aux problèmes de santé publique au Niger.",
+      "lead": "A. M. Oumarou",
+      "tags": [
+        "optimisation",
+        "contrôle"
+      ],
       "link": "#"
     }
   ]
