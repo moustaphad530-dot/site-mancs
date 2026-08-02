@@ -3,10 +3,10 @@
    ============================================================ */
 :root {
   --ink: #1a1a2e;
-  --paper: #ffffff;
-  --paper-raised: #f8f7fd;
-  --rule: #e4e0f5;
-  --rule-strong: #cfc8ee;
+  --paper: #eef0f2;
+  --paper-raised: #f8f8fa;
+  --rule: #dcdfe3;
+  --rule-strong: #c5c9d0;
 
   --violet: #6d28d9;
   --violet-dim: #ede7fc;
@@ -36,10 +36,7 @@ html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
-  background:
-    radial-gradient(600px 400px at 92% -5%, rgba(240,82,47,0.10), transparent 60%),
-    radial-gradient(700px 500px at -5% 15%, rgba(109,40,217,0.08), transparent 60%),
-    var(--paper);
+  background: var(--paper);
   color: var(--ink);
   font-family: var(--font-body);
   font-size: 16px;
@@ -395,3 +392,42 @@ footer.site-footer { border-top: 1px solid var(--rule-strong); padding: 40px 0; 
 /* utility */
 .mt-0 { margin-top: 0; }
 .center-note { text-align: center; padding: 60px 0; color: var(--muted); }
+
+/* ============================================================
+   BANDE D'ILLUSTRATIONS DÉFILANTES — page d'accueil uniquement
+   ============================================================ */
+.marquee-strip {
+  overflow: hidden;
+  background: var(--paper-raised);
+  border-bottom: 1px solid var(--rule-strong);
+  padding: 18px 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 28px;
+  width: max-content;
+  animation: marqueeScroll 38s linear infinite;
+}
+
+.marquee-strip:hover .marquee-track { animation-play-state: paused; }
+
+.marquee-card {
+  flex: 0 0 auto;
+  width: 220px;
+  height: 140px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--rule-strong);
+  background: #fff;
+}
+.marquee-card svg { width: 100%; height: 100%; display: block; }
+
+@keyframes marqueeScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
