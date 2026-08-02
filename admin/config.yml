@@ -76,6 +76,7 @@ collections:
           - { name: entries, label: "Séminaires", widget: list, fields: [
               { name: id, label: "Identifiant (unique)", widget: string },
               { name: date, label: "Date", widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false },
+              { name: time, label: "Heure", widget: string, default: "14h00", hint: "Ex. 14h00 — modifiable si l'horaire change exceptionnellement" },
               { name: title, label: "Titre de l'exposé", widget: string },
               { name: speaker, label: "Intervenant·e", widget: string },
               { name: abstract, label: "Résumé", widget: text },
