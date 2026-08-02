@@ -66,6 +66,22 @@ collections:
               { name: link, label: "Lien", widget: string, required: false },
             ]}
 
+  - name: "seminaires"
+    label: "Séminaires"
+    files:
+      - name: "entries"
+        label: "Séminaires"
+        file: "content/seminaires.json"
+        fields:
+          - { name: entries, label: "Séminaires", widget: list, fields: [
+              { name: id, label: "Identifiant (unique)", widget: string },
+              { name: date, label: "Date", widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false },
+              { name: title, label: "Titre de l'exposé", widget: string },
+              { name: speaker, label: "Intervenant·e", widget: string },
+              { name: abstract, label: "Résumé", widget: text },
+              { name: room, label: "Salle", widget: string, required: false },
+            ]}
+
   - name: "posts"
     label: "Actualités"
     files:
