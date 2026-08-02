@@ -69,7 +69,7 @@ section.tight { padding: 40px 0; }
   z-index: 50;
 }
 
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; height: 76px; }
+.site-header .wrap { display: flex; align-items: center; justify-content: space-between; min-height: 76px; padding-top: 10px; padding-bottom: 10px; gap: 20px; flex-wrap: wrap; }
 
 .brand { display: flex; flex-direction: column; line-height: 1.1; text-decoration: none; }
 
@@ -82,7 +82,7 @@ section.tight { padding: 40px 0; }
   font-weight: 600;
 }
 
-.brand .name { font-family: var(--font-display); font-size: 22px; font-weight: 700; color: var(--violet); }
+.brand .name { font-family: var(--font-display); font-size: 17px; font-weight: 700; color: var(--violet); line-height: 1.25; max-width: 420px; }
 
 nav.primary-nav { display: flex; gap: 2px; align-items: center; }
 
