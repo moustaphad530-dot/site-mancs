@@ -1,0 +1,11 @@
+<svg viewBox="0 0 220 140" xmlns="http://www.w3.org/2000/svg">
+<rect width="220" height="140" fill="#8a5a34"/>
+<rect x="8" y="8" width="204" height="124" rx="4" fill="#2b3a30"/>
+<path d="M20 40 Q 45 15, 70 40 T 120 40" stroke="#eef0f2" stroke-width="1.6" fill="none" opacity="0.85"/>
+<text x="20" y="70" font-family="Georgia, serif" font-size="20" fill="#eef0f2" opacity="0.9">&#8747; f(x) dx</text>
+<text x="20" y="95" font-family="Georgia, serif" font-size="18" fill="#eef0f2" opacity="0.8">&#8721; a&#8345; = &#960;&#178;/6</text>
+<text x="150" y="55" font-family="Georgia, serif" font-size="22" fill="#eef0f2" opacity="0.7">&#8706;u/&#8706;t</text>
+<circle cx="190" cy="100" r="1.4" fill="#eef0f2" opacity="0.5"/>
+<circle cx="180" cy="108" r="1.1" fill="#eef0f2" opacity="0.4"/>
+<circle cx="195" cy="112" r="1" fill="#eef0f2" opacity="0.4"/>
+</svg>
