@@ -230,10 +230,44 @@ async function renderPosts() {
   }
 }
 
+// ============================================================
+// Page séminaires
+// ============================================================
+async function renderSeminars() {
+  const mount = document.getElementById("seminar-list");
+  if (!mount) return;
+  try {
+    const seminars = await loadJSON("content/seminaires.json");
+    if (!seminars.length) {
+      mount.innerHTML = `<div class="empty-state">Aucun séminaire programmé pour le moment. Ajoutez-en via content/seminaires.json.</div>`;
+      return;
+    }
+    const sorted = [...seminars].sort((a, b) => new Date(a.date) - new Date(b.date));
+    mount.innerHTML = sorted
+      .map(
+        (s) => `
+      <div class="post-item">
+        <div class="date">${formatDateFR(s.date)}</div>
+        <div>
+          <h3>${escapeHTML(s.title)}</h3>
+          <div class="mono-tag" style="color: var(--violet)">${escapeHTML(s.speaker)}</div>
+          <p class="muted" style="margin-top:6px">${escapeHTML(s.abstract)}</p>
+          ${s.room ? `<div class="mono-tag">${escapeHTML(s.room)}</div>` : ""}
+        </div>
+      </div>`
+      )
+      .join("");
+  } catch (e) {
+    mount.innerHTML = `<div class="empty-state">Erreur de chargement des séminaires.</div>`;
+    console.error(e);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderHomePreviews();
   renderTeam();
   renderPublications();
   renderProjects();
   renderPosts();
+  renderSeminars();
 });
