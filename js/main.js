@@ -247,7 +247,7 @@ async function renderSeminars() {
       .map(
         (s) => `
       <div class="post-item">
-        <div class="date">${formatDateFR(s.date)}</div>
+        <div class="date">${formatDateFR(s.date)}${s.time ? ` — ${escapeHTML(s.time)}` : ""}</div>
         <div>
           <h3>${escapeHTML(s.title)}</h3>
           <div class="mono-tag" style="color: var(--violet)">${escapeHTML(s.speaker)}</div>
