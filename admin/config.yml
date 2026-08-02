@@ -18,62 +18,66 @@ public_folder: "/images"
 collections:
   - name: "team"
     label: "Équipe"
-    label_singular: "Membre"
-    file: "content/team.json"
-    format: "json"
-    fields:
-      - { name: entries, label: "Membres", widget: list, fields: [
-          { name: id, label: "Identifiant (unique, sans espace)", widget: string },
-          { name: name, label: "Nom", widget: string },
-          { name: role, label: "Rôle", widget: string },
-          { name: field, label: "Domaine de recherche", widget: string },
-          { name: bio, label: "Bio courte", widget: text },
-          { name: email, label: "E-mail", widget: string },
-        ]}
+    files:
+      - name: "entries"
+        label: "Membres"
+        file: "content/team.json"
+        fields:
+          - { name: entries, label: "Membres", widget: list, fields: [
+              { name: id, label: "Identifiant (unique, sans espace)", widget: string },
+              { name: name, label: "Nom", widget: string },
+              { name: role, label: "Rôle", widget: string },
+              { name: field, label: "Domaine de recherche", widget: string },
+              { name: bio, label: "Bio courte", widget: text },
+              { name: email, label: "E-mail", widget: string },
+            ]}
 
   - name: "publications"
     label: "Publications"
-    label_singular: "Publication"
-    file: "content/publications.json"
-    format: "json"
-    fields:
-      - { name: entries, label: "Publications", widget: list, fields: [
-          { name: id, label: "Identifiant (unique)", widget: string },
-          { name: year, label: "Année", widget: number, value_type: int },
-          { name: title, label: "Titre", widget: string },
-          { name: authors, label: "Auteurs", widget: string },
-          { name: venue, label: "Revue / conférence", widget: string },
-          { name: link, label: "PDF de la publication", widget: file, required: false, media_folder: "/files", public_folder: "/files", media_library: { config: { multiple: false } }, hint: "Cliquez pour choisir un fichier PDF depuis votre ordinateur" },
-          { name: tags, label: "Mots-clés", widget: list, required: false },
-        ]}
+    files:
+      - name: "entries"
+        label: "Publications"
+        file: "content/publications.json"
+        fields:
+          - { name: entries, label: "Publications", widget: list, fields: [
+              { name: id, label: "Identifiant (unique)", widget: string },
+              { name: year, label: "Année", widget: number, value_type: int },
+              { name: title, label: "Titre", widget: string },
+              { name: authors, label: "Auteurs", widget: string },
+              { name: venue, label: "Revue / conférence", widget: string },
+              { name: link, label: "PDF de la publication", widget: file, required: false, media_folder: "/files", public_folder: "/files", hint: "Cliquez pour choisir un fichier PDF depuis votre ordinateur" },
+              { name: tags, label: "Mots-clés", widget: list, required: false },
+            ]}
 
   - name: "projects"
     label: "Projets"
-    label_singular: "Projet"
-    file: "content/projects.json"
-    format: "json"
-    fields:
-      - { name: entries, label: "Projets", widget: list, fields: [
-          { name: id, label: "Identifiant (unique)", widget: string },
-          { name: title, label: "Titre du projet", widget: string },
-          { name: status, label: "Statut", widget: select, options: ["active", "completed"] },
-          { name: summary, label: "Résumé", widget: text },
-          { name: lead, label: "Responsable", widget: string },
-          { name: tags, label: "Mots-clés", widget: list, required: false },
-          { name: link, label: "Lien", widget: string, required: false },
-        ]}
+    files:
+      - name: "entries"
+        label: "Projets"
+        file: "content/projects.json"
+        fields:
+          - { name: entries, label: "Projets", widget: list, fields: [
+              { name: id, label: "Identifiant (unique)", widget: string },
+              { name: title, label: "Titre du projet", widget: string },
+              { name: status, label: "Statut", widget: select, options: ["active", "completed"] },
+              { name: summary, label: "Résumé", widget: text },
+              { name: lead, label: "Responsable", widget: string },
+              { name: tags, label: "Mots-clés", widget: list, required: false },
+              { name: link, label: "Lien", widget: string, required: false },
+            ]}
 
   - name: "posts"
     label: "Actualités"
-    label_singular: "Actualité"
-    file: "content/posts.json"
-    format: "json"
-    fields:
-      - { name: entries, label: "Actualités", widget: list, fields: [
-          { name: id, label: "Identifiant (unique)", widget: string },
-          { name: date, label: "Date", widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false },
-          { name: title, label: "Titre", widget: string },
-          { name: excerpt, label: "Résumé court", widget: text },
-          { name: body, label: "Texte complet", widget: text },
-          { name: author, label: "Auteur", widget: string },
-        ]}
+    files:
+      - name: "entries"
+        label: "Actualités"
+        file: "content/posts.json"
+        fields:
+          - { name: entries, label: "Actualités", widget: list, fields: [
+              { name: id, label: "Identifiant (unique)", widget: string },
+              { name: date, label: "Date", widget: datetime, format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false },
+              { name: title, label: "Titre", widget: string },
+              { name: excerpt, label: "Résumé court", widget: text },
+              { name: body, label: "Texte complet", widget: text },
+              { name: author, label: "Auteur", widget: string },
+            ]}
