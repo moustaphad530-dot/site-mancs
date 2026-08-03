@@ -56,11 +56,17 @@ a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visib
   * { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
 
+/* ============================================================
+   LAYOUT PRIMITIVES
+   ============================================================ */
 .wrap { max-width: var(--page-max); margin: 0 auto; padding: 0 var(--edge); }
 .rule { border: none; border-top: 1px solid var(--rule-strong); margin: 0; }
 section { padding: 64px 0; }
 section.tight { padding: 40px 0; }
 
+/* ============================================================
+   HEADER / NAV
+   ============================================================ */
 .site-header {
   background: var(--paper-raised);
   border-bottom: 1px solid var(--rule-strong);
@@ -132,6 +138,9 @@ nav.primary-nav a[aria-current="page"]::after { content: " \25CF"; color: var(--
   .nav-toggle { display: block; }
 }
 
+/* ============================================================
+   MARGINALIA — pastille colorée
+   ============================================================ */
 .marginalia {
   display: inline-flex;
   align-items: center;
@@ -148,6 +157,9 @@ nav.primary-nav a[aria-current="page"]::after { content: " \25CF"; color: var(--
   box-shadow: 0 4px 12px rgba(240, 82, 47, 0.25);
 }
 
+/* ============================================================
+   TYPE
+   ============================================================ */
 .eyebrow {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -169,6 +181,9 @@ p.lede { font-size: 19px; color: #423b52; max-width: 640px; }
 
 .mono-tag { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.04em; color: var(--muted); }
 
+/* ============================================================
+   BUTTONS / LINKS
+   ============================================================ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -206,6 +221,9 @@ p.lede { font-size: 19px; color: #423b52; max-width: 640px; }
 }
 .link-arrow:hover { border-bottom-color: var(--coral); }
 
+/* ============================================================
+   HERO
+   ============================================================ */
 .hero {
   padding: 88px 0 64px;
   border-bottom: 1px solid var(--rule-strong);
@@ -236,8 +254,14 @@ p.lede { font-size: 19px; color: #423b52; max-width: 640px; }
   .hero-side { border-left: none; border-top: 3px solid var(--coral); padding-left: 0; padding-top: 20px; flex-direction: row; flex-wrap: wrap; gap: 28px; }
 }
 
+/* ============================================================
+   SECTION HEAD
+   ============================================================ */
 .section-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 36px; flex-wrap: wrap; }
 
+/* ============================================================
+   CARDS — team, projects (bordure colorée tournante)
+   ============================================================ */
 .grid { display: grid; gap: 16px; }
 .grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 .grid.cols-2 { grid-template-columns: repeat(2, 1fr); }
@@ -291,6 +315,9 @@ p.lede { font-size: 19px; color: #423b52; max-width: 640px; }
 .status-pill.active { color: #fff; background: linear-gradient(135deg, var(--blue), var(--violet)); }
 .status-pill.done { color: var(--muted); background: var(--rule); }
 
+/* ============================================================
+   PUBLICATIONS — liste de citations
+   ============================================================ */
 .pub-list { border-top: 1px solid var(--rule-strong); }
 .pub-item {
   display: grid;
@@ -321,11 +348,17 @@ p.lede { font-size: 19px; color: #423b52; max-width: 640px; }
   .pub-item .link-col { grid-column: 2; }
 }
 
+/* ============================================================
+   BLOG / ACTUALITÉS
+   ============================================================ */
 .post-list { display: flex; flex-direction: column; }
 .post-item { display: grid; grid-template-columns: 140px 1fr; gap: 24px; padding: 26px 0; border-bottom: 1px solid var(--rule-strong); }
 .post-item .date { font-family: var(--font-mono); font-size: 12.5px; font-weight: 700; color: var(--blue); text-transform: uppercase; padding-top: 4px; }
 @media (max-width: 620px) { .post-item { grid-template-columns: 1fr; } .post-item .date { padding-top: 0; } }
 
+/* ============================================================
+   FORMS (contact)
+   ============================================================ */
 .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; max-width: 720px; }
 .form-grid .full { grid-column: 1 / -1; }
 label { display: block; font-family: var(--font-mono); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 6px; }
@@ -343,16 +376,48 @@ input:focus, textarea:focus, select:focus { border-color: var(--violet); }
 textarea { resize: vertical; min-height: 130px; }
 @media (max-width: 620px) { .form-grid { grid-template-columns: 1fr; } }
 
+/* ============================================================
+   FOOTER
+   ============================================================ */
 footer.site-footer { border-top: 1px solid var(--rule-strong); padding: 40px 0; margin-top: 40px; }
 .footer-grid { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px; font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
 .footer-grid a { color: var(--violet); text-decoration: none; font-weight: 600; }
 .footer-grid a:hover { color: var(--coral); }
 
+/* ============================================================
+   EMPTY STATE
+   ============================================================ */
 .empty-state { padding: 40px 0; color: var(--muted); font-family: var(--font-mono); font-size: 13px; }
 
+/* ============================================================
+   STATS — "Quelques chiffres"
+   ============================================================ */
+.stat-box {
+  border-radius: 14px;
+  padding: 26px 20px;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(135deg, var(--violet), var(--blue));
+}
+.stat-box:nth-child(4n+2) { background: linear-gradient(135deg, var(--blue), var(--coral)); }
+.stat-box:nth-child(4n+3) { background: linear-gradient(135deg, var(--coral), var(--amber)); }
+.stat-box:nth-child(4n+4) { background: linear-gradient(135deg, var(--amber), var(--violet)); }
+.stat-box .num { font-family: var(--font-display); font-size: 40px; font-weight: 700; line-height: 1; }
+.stat-box .lbl { font-family: var(--font-mono); font-size: 11px; text-transform: uppercase; letter-spacing: 0.06em; margin-top: 8px; opacity: 0.92; }
+
+@media (max-width: 620px) { .grid.cols-4 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 621px) { .grid.cols-4 { grid-template-columns: repeat(4, 1fr); } }
+@media (min-width: 900px) { .grid.cols-6 { grid-template-columns: repeat(6, 1fr); } }
+@media (max-width: 899px) and (min-width: 621px) { .grid.cols-6 { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 620px) { .grid.cols-6 { grid-template-columns: repeat(2, 1fr); } }
+
+/* utility */
 .mt-0 { margin-top: 0; }
 .center-note { text-align: center; padding: 60px 0; color: var(--muted); }
 
+/* ============================================================
+   BANDE D'ILLUSTRATIONS DÉFILANTES — page d'accueil uniquement
+   ============================================================ */
 .marquee-strip {
   overflow: hidden;
   background: var(--paper-raised);

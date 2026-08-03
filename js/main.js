@@ -111,7 +111,7 @@ async function renderHomePreviews() {
         <div class="post-item">
           <div class="date">${formatDateFR(p.date)}</div>
           <div>
-            <h3>${escapeHTML(p.title)}</h3>
+            <h3><a href="article.html?id=${encodeURIComponent(p.id)}" style="color:inherit; text-decoration:none;">${escapeHTML(p.title)}</a></h3>
             <p class="muted">${escapeHTML(p.excerpt)}</p>
           </div>
         </div>`
@@ -292,9 +292,10 @@ async function renderPosts() {
       <div class="post-item">
         <div class="date">${formatDateFR(p.date)}</div>
         <div>
-          <h3>${escapeHTML(p.title)}</h3>
+          <h3><a href="article.html?id=${encodeURIComponent(p.id)}" style="color:inherit; text-decoration:none;">${escapeHTML(p.title)}</a></h3>
           <p class="muted">${escapeHTML(p.excerpt)}</p>
           <div class="mono-tag">— ${escapeHTML(p.author)}</div>
+          <a class="link-arrow" href="article.html?id=${encodeURIComponent(p.id)}" style="margin-top:6px; display:inline-block;">Lire l'article complet →</a>
         </div>
       </div>`
       )
@@ -338,6 +339,155 @@ async function renderSeminars() {
   }
 }
 
+// ============================================================
+// Page article complet
+// ============================================================
+async function renderArticle() {
+  const mount = document.getElementById("article-content");
+  if (!mount) return;
+  try {
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+    const posts = await loadJSON("content/posts.json");
+    const post = posts.find((p) => p.id === id);
+
+    if (!post) {
+      mount.innerHTML = `<div class="empty-state">Article introuvable. <a class="link-arrow" href="actualites.html">Retour aux actualités →</a></div>`;
+      return;
+    }
+
+    document.title = `${post.title} — Mathématiques Fondamentales et Applications`;
+
+    const paragraphs = (post.body || post.excerpt || "")
+      .split(/\n\s*\n/)
+      .map((para) => `<p>${escapeHTML(para.trim())}</p>`)
+      .join("");
+
+    mount.innerHTML = `
+      <div class="mono-tag" style="color: var(--blue); text-transform:uppercase;">${formatDateFR(post.date)}</div>
+      <h1 style="margin-top:10px; font-size:clamp(28px,4vw,42px)">${escapeHTML(post.title)}</h1>
+      <div class="mono-tag" style="margin-top:14px; color: var(--violet);">Par ${escapeHTML(post.author)}</div>
+      <div style="margin-top:28px; font-size:17px; line-height:1.7;">${paragraphs}</div>
+    `;
+  } catch (e) {
+    mount.innerHTML = `<div class="empty-state">Erreur de chargement de l'article.</div>`;
+    console.error(e);
+  }
+}
+
+// ============================================================
+// Quelques chiffres — composition par catégorie
+// ============================================================
+function categorize(role) {
+  const r = role.toLowerCase();
+  if (r.includes("doctorant")) return "doctorants";
+  if (r.includes("ingénieur")) return "ingenieurs";
+  if (r.includes("postdoc")) return "postdocs";
+  return "permanents";
+}
+
+async function renderStats() {
+  const mount = document.getElementById("stats-grid");
+  if (!mount) return;
+  try {
+    const [team, pubs, seminars] = await Promise.all([
+      loadJSON("content/team.json"),
+      loadJSON("content/publications.json"),
+      loadJSON("content/seminaires.json"),
+    ]);
+
+    const counts = { permanents: 0, postdocs: 0, doctorants: 0, ingenieurs: 0 };
+    team.forEach((m) => { counts[categorize(m.role)]++; });
+
+    const stats = [
+      { num: counts.permanents, label: "Chercheurs permanents" },
+      { num: counts.postdocs, label: "Chercheurs postdoctoraux" },
+      { num: counts.doctorants, label: "Doctorant·es" },
+      { num: counts.ingenieurs, label: "Ingénieur·es" },
+      { num: pubs.length, label: "Publications" },
+      { num: seminars.length, label: "Séminaires programmés" },
+    ];
+
+    mount.innerHTML = stats
+      .map(
+        (s) => `
+      <div class="stat-box">
+        <div class="num">${s.num}</div>
+        <div class="lbl">${escapeHTML(s.label)}</div>
+      </div>`
+      )
+      .join("");
+  } catch (e) {
+    mount.innerHTML = `<div class="empty-state">Erreur de chargement des statistiques.</div>`;
+    console.error(e);
+  }
+}
+
+// ============================================================
+// Évènements à venir (aperçu accueil)
+// ============================================================
+async function renderUpcomingEvents() {
+  const mount = document.getElementById("home-events-preview");
+  if (!mount) return;
+  try {
+    const seminars = await loadJSON("content/seminaires.json");
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+    const upcoming = seminars
+      .filter((s) => new Date(s.date + "T00:00:00") >= today)
+      .sort((a, b) => new Date(a.date) - new Date(b.date))
+      .slice(0, 4);
+
+    if (!upcoming.length) {
+      mount.innerHTML = `<div class="empty-state">Aucun événement à venir programmé pour le moment.</div>`;
+      return;
+    }
+
+    mount.innerHTML = upcoming
+      .map(
+        (s) => `
+      <li style="padding:14px 0; border-bottom:1px solid var(--rule-strong); list-style:none;">
+        <a href="seminaires.html" style="text-decoration:none; color:inherit;">
+          <span class="mono-tag" style="color: var(--coral);">${formatDateFR(s.date)}${s.time ? ` — ${escapeHTML(s.time)}` : ""}</span>
+          <div style="font-family: var(--font-display); font-weight:600; font-size:17px; margin-top:4px;">${escapeHTML(s.title)}</div>
+          <div class="mono-tag" style="margin-top:2px;">Séminaire — ${escapeHTML(s.speaker)}</div>
+        </a>
+      </li>`
+      )
+      .join("");
+  } catch (e) {
+    mount.innerHTML = `<div class="empty-state">Erreur de chargement des événements.</div>`;
+    console.error(e);
+  }
+}
+
+// ============================================================
+// Focus (raccourcis accueil)
+// ============================================================
+async function renderFocus() {
+  const mount = document.getElementById("focus-grid");
+  if (!mount) return;
+  try {
+    const items = await loadJSON("content/focus.json");
+    if (!items.length) {
+      mount.innerHTML = `<div class="empty-state">Raccourcis à venir — ajoutez-les depuis l'éditeur (/admin/ → Focus).</div>`;
+      return;
+    }
+    mount.innerHTML = items
+      .map(
+        (i) => `
+      <a href="${escapeHTML(i.link)}" class="card" style="text-decoration:none;">
+        <h3>${escapeHTML(i.title)}</h3>
+        <p class="muted">${escapeHTML(i.description)}</p>
+      </a>`
+      )
+      .join("");
+  } catch (e) {
+    mount.innerHTML = `<div class="empty-state">Erreur de chargement.</div>`;
+    console.error(e);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderHomePreviews();
   renderTeam();
@@ -347,4 +497,8 @@ document.addEventListener("DOMContentLoaded", () => {
   renderSeminars();
   renderMission();
   renderPartners();
+  renderArticle();
+  renderStats();
+  renderUpcomingEvents();
+  renderFocus();
 });

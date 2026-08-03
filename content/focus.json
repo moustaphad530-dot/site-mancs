@@ -1,0 +1,28 @@
+{
+  "entries": [
+    {
+      "id": "focus-1",
+      "title": "Nos publications",
+      "description": "Consultez l'ensemble de nos articles et rapports de recherche, avec accès aux PDF.",
+      "link": "publications.html"
+    },
+    {
+      "id": "focus-2",
+      "title": "Nos projets",
+      "description": "Découvrez les grands chantiers de recherche en cours et achevés de l'équipe.",
+      "link": "projets.html"
+    },
+    {
+      "id": "focus-3",
+      "title": "Programme des séminaires",
+      "description": "Le rendez-vous hebdomadaire de l'équipe, tous les samedis à 14h.",
+      "link": "seminaires.html"
+    },
+    {
+      "id": "focus-4",
+      "title": "Nous rejoindre",
+      "description": "Stages, thèses, postdoctorats : consultez nos opportunités et écrivez-nous.",
+      "link": "contact.html"
+    }
+  ]
+}

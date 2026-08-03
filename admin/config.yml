@@ -110,6 +110,20 @@ collections:
               { name: logo, label: "Logo (optionnel)", widget: file, required: false, media_folder: "/images/partners", public_folder: "/images/partners", hint: "Image du logo, idéalement sur fond transparent ou blanc" },
             ]}
 
+  - name: "focus"
+    label: "Focus (raccourcis accueil)"
+    files:
+      - name: "entries"
+        label: "Raccourcis"
+        file: "content/focus.json"
+        fields:
+          - { name: entries, label: "Raccourcis", widget: list, fields: [
+              { name: id, label: "Identifiant (unique)", widget: string },
+              { name: title, label: "Titre", widget: string },
+              { name: description, label: "Description", widget: text },
+              { name: link, label: "Lien (ex. publications.html)", widget: string },
+            ]}
+
   - name: "posts"
     label: "Actualités"
     files:
