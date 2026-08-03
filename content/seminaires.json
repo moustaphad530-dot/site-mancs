@@ -6,7 +6,17 @@
       "title": "Constrained Consensus-Based Optimization for Decentralized Path Planning in UAV Swarms (en français: Optimisation sous contraintes fondée sur le consensus pour la planification décentralisée de trajectoires d’essaims de drones)",
       "speaker": "ASSOUMANE IDI ISMAËL",
       "abstract": "The problem of safe navigation of UAV swarms in constrained environments can be rigorously for mulated as a class of distributed constrained optimization problems with time-varying feasibility sets and coupling constraints. From a mathematical perspective, this places swarmnavigation at the intersection of multi-agent optimization, consensus dynamics, and constrained control [71, 18]. \n\nConsensus-based optimization has emerged as a principled approach to enforce coordination in decentralized systems, particularly when agents possess only local information and communicate over sparse or time-varying graphs [74, 70]. In swarm robotics, consensus mechanisms have been successfully used to achieve formation control, collision avoidance, and collective motion [85, 75]. \n\nHowever, most existing consensus-based navigation methods either neglect hard constraints imposed by obstacles and vehicle dynamics or rely on heuristic potential fields that lack convergence and safety 570\nguarantees [53]. In dynamic and uncertain environments, these limitations become critical. \n\nThis Directed Research addresses these challenges by developing mathematically grounded methods for decentralized UAV swarm navigation based on constrained consensus-based optimization, explicitly accounting for nonconvex constraints, environmental dynamics, and uncertainty.",
-      "room": "Bureau du Pr Saley Bisso (Laboratoire de Mathématiques)"
+      "room": "Bureau du Pr Saley Bisso (Laboratoire de Mathématiques)",
+      "time": "14h00"
+    },
+    {
+      "time": "14h00",
+      "id": "sem - 02",
+      "date": "2026-08-15",
+      "title": "Résolution et Simulation numériques d'un problème de la remontée des déchets radioactifs enfouis",
+      "speaker": "Brahima Maiga Abass",
+      "abstract": "Il s'agira pour le doctorant de nous présenter les résultats obtenus sur une partie de sa thèse.",
+      "room": "Bureau du chef d'équipe"
     }
   ]
 }
