@@ -2,7 +2,7 @@
   "entries": [
     {
       "id": "stat-0",
-      "label": "Chercheurs permanents",
+      "label": "Directeur du Laboratoire",
       "source": "team_keyword",
       "keyword": "Directeur"
     },
