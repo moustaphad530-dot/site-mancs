@@ -83,6 +83,30 @@ collections:
               { name: room, label: "Salle", widget: string, required: false },
             ]}
 
+  - name: "stats"
+    label: "Quelques chiffres"
+    files:
+      - name: "entries"
+        label: "Chiffres"
+        file: "content/stats.json"
+        fields:
+          - { name: entries, label: "Chiffres", widget: list, fields: [
+              { name: id, label: "Identifiant (unique)", widget: string },
+              { name: number, label: "Nombre", widget: string },
+              { name: label, label: "Légende", widget: string },
+            ]}
+
+  - name: "banner"
+    label: "Accueil — Bannière"
+    files:
+      - name: "entries"
+        label: "Bannière"
+        file: "content/banner.json"
+        fields:
+          - { name: line1, label: "Petit texte du haut", widget: string }
+          - { name: line2, label: "Grand texte (nom de l'équipe)", widget: text }
+          - { name: line3, label: "Petit texte du bas", widget: string }
+
   - name: "hero"
     label: "Accueil — Titre principal"
     files:

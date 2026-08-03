@@ -3,31 +3,13 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Équipe — Mathématiques Fondamentales et Applications</title>
-<meta name="description" content="Chercheuses, chercheurs, doctorant·es et ingénieur·es de l'équipe de Modélisation, Analyse Numérique et Calcul Scientifique (MANCS)." />
-<link rel="canonical" href="https://mfa-ancs.netlify.app/equipe.html" />
+<title>Ma fiche membre — Mathématiques Fondamentales et Applications</title>
+<meta name="description" content="Formulaire pour renseigner ou mettre à jour votre fiche sur la page Équipe." />
 
 <!-- Favicon -->
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
 <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
-
-<!-- Open Graph / réseaux sociaux -->
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="fr_FR" />
-<meta property="og:site_name" content="Équipe MANCS — Mathématiques Fondamentales et Applications" />
-<meta property="og:title" content="Équipe — Mathématiques Fondamentales et Applications" />
-<meta property="og:description" content="Chercheuses, chercheurs, doctorant·es et ingénieur·es de l'équipe de Modélisation, Analyse Numérique et Calcul Scientifique (MANCS)." />
-<meta property="og:url" content="https://mfa-ancs.netlify.app/equipe.html" />
-<meta property="og:image" content="https://mfa-ancs.netlify.app/images/og-image.jpg" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Équipe — Mathématiques Fondamentales et Applications" />
-<meta name="twitter:description" content="Chercheuses, chercheurs, doctorant·es et ingénieur·es de l'équipe de Modélisation, Analyse Numérique et Calcul Scientifique (MANCS)." />
-<meta name="twitter:image" content="https://mfa-ancs.netlify.app/images/og-image.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -43,7 +25,7 @@
     </a>
     <nav class="primary-nav" aria-label="Navigation principale">
       <a href="index.html">Accueil</a>
-      <a href="equipe.html" aria-current="page">Équipe</a>
+      <a href="equipe.html">Équipe</a>
       <a href="publications.html">Publications</a>
       <a href="projets.html">Projets</a>
       <a href="seminaires.html">Séminaires</a>
@@ -57,20 +39,43 @@
 <main>
   <section class="tight" style="padding-top:56px;">
     <div class="wrap">
-      <span class="marginalia" id="stat-team-count-wrap">Membres</span>
-      <h1 style="margin-top:16px; font-size:clamp(32px,4vw,46px)">L'équipe</h1>
+      <span class="marginalia">Membre de l'équipe</span>
+      <h1 style="margin-top:16px; font-size:clamp(32px,4vw,46px)">Ma fiche membre</h1>
       <p class="lede" style="margin-top:16px">
-        Chercheuses, chercheurs, doctorant·es et ingénieur·es qui composent le laboratoire aujourd'hui.
+        Ce formulaire sert à renseigner ou mettre à jour vos informations pour la page Équipe du site.
+        Une fois envoyé, l'administrateur du site l'ajoutera à votre fiche publique.
       </p>
-      <a href="fiche-equipe.html" class="link-arrow" style="margin-top:12px; display:inline-block;">Vous faites partie de l'équipe et votre fiche n'est pas à jour ? Remplissez ce formulaire →</a>
     </div>
   </section>
 
   <section class="tight">
-    <div class="wrap">
-      <div class="grid cols-3" id="team-grid">
-        <div class="empty-state">Chargement de l'équipe…</div>
-      </div>
+    <div class="wrap" style="max-width: 640px;">
+      <form class="form-grid" name="fiche-equipe" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="fiche-equipe" />
+        <div class="full">
+          <label for="name">Nom complet</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div class="full">
+          <label for="role">Rôle</label>
+          <input id="role" name="role" type="text" placeholder="Ex. Doctorant·e, Chargé·e de recherche, Ingénieur·e..." required />
+        </div>
+        <div class="full">
+          <label for="field">Domaine de recherche</label>
+          <input id="field" name="field" type="text" placeholder="Ex. Analyse numérique, Probabilités..." required />
+        </div>
+        <div class="full">
+          <label for="bio">Bio courte (1 à 2 phrases)</label>
+          <textarea id="bio" name="bio" required></textarea>
+        </div>
+        <div class="full">
+          <label for="email">E-mail (à afficher publiquement)</label>
+          <input id="email" name="email" type="email" required />
+        </div>
+        <div class="full">
+          <button type="submit" class="btn primary">Envoyer ma fiche</button>
+        </div>
+      </form>
     </div>
   </section>
 </main>

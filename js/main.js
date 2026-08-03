@@ -376,43 +376,22 @@ async function renderArticle() {
 }
 
 // ============================================================
-// Quelques chiffres — composition par catégorie
+// Quelques chiffres — éditable depuis l'éditeur
 // ============================================================
-function categorize(role) {
-  const r = role.toLowerCase();
-  if (r.includes("doctorant")) return "doctorants";
-  if (r.includes("ingénieur")) return "ingenieurs";
-  if (r.includes("postdoc")) return "postdocs";
-  return "permanents";
-}
-
 async function renderStats() {
   const mount = document.getElementById("stats-grid");
   if (!mount) return;
   try {
-    const [team, pubs, seminars] = await Promise.all([
-      loadJSON("content/team.json"),
-      loadJSON("content/publications.json"),
-      loadJSON("content/seminaires.json"),
-    ]);
-
-    const counts = { permanents: 0, postdocs: 0, doctorants: 0, ingenieurs: 0 };
-    team.forEach((m) => { counts[categorize(m.role)]++; });
-
-    const stats = [
-      { num: counts.permanents, label: "Chercheurs permanents" },
-      { num: counts.postdocs, label: "Chercheurs postdoctoraux" },
-      { num: counts.doctorants, label: "Doctorant·es" },
-      { num: counts.ingenieurs, label: "Ingénieur·es" },
-      { num: pubs.length, label: "Publications" },
-      { num: seminars.length, label: "Séminaires programmés" },
-    ];
-
+    const stats = await loadJSON("content/stats.json");
+    if (!stats.length) {
+      mount.innerHTML = `<div class="empty-state">Chiffres à venir — ajoutez-les depuis l'éditeur (/admin/ → Quelques chiffres).</div>`;
+      return;
+    }
     mount.innerHTML = stats
       .map(
         (s) => `
       <div class="stat-box">
-        <div class="num">${s.num}</div>
+        <div class="num">${escapeHTML(s.number)}</div>
         <div class="lbl">${escapeHTML(s.label)}</div>
       </div>`
       )
@@ -508,6 +487,26 @@ async function renderHero() {
   }
 }
 
+// ============================================================
+// Bannière statique de l'accueil
+// ============================================================
+async function renderBanner() {
+  const l1 = document.getElementById("banner-line1");
+  const l2 = document.getElementById("banner-line2");
+  const l3 = document.getElementById("banner-line3");
+  if (!l1 && !l2 && !l3) return;
+  try {
+    const res = await fetch("content/banner.json");
+    if (!res.ok) throw new Error("Impossible de charger content/banner.json");
+    const data = await res.json();
+    if (l1) l1.textContent = data.line1 || "";
+    if (l2) l2.textContent = data.line2 || "";
+    if (l3) l3.textContent = data.line3 || "";
+  } catch (e) {
+    console.error(e);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderHomePreviews();
   renderTeam();
@@ -522,4 +521,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderUpcomingEvents();
   renderFocus();
   renderHero();
+  renderBanner();
 });
