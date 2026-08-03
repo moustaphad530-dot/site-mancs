@@ -2,20 +2,20 @@
    TOKENS — palette dynamique et colorée
    ============================================================ */
 :root {
-  --ink: #1a1a2e;
-  --paper: #eef0f2;
-  --paper-raised: #f8f8fa;
-  --rule: #dcdfe3;
-  --rule-strong: #c5c9d0;
+  --ink: #16232b;
+  --paper: #f2f5f6;
+  --paper-raised: #ffffff;
+  --rule: #dbe4e7;
+  --rule-strong: #c2d0d4;
 
-  --violet: #6d28d9;
-  --violet-dim: #ede7fc;
-  --blue: #2563eb;
-  --blue-dim: #e2ecfe;
-  --coral: #f0522f;
-  --coral-dim: #fde3dc;
-  --amber: #f5a623;
-  --amber-dim: #fdf0d9;
+  --violet: #1f7a99;
+  --violet-dim: #e1eef2;
+  --blue: #145066;
+  --blue-dim: #d8e8ec;
+  --coral: #2f8fae;
+  --coral-dim: #e4f1f5;
+  --amber: #4fa8c4;
+  --amber-dim: #eef7fa;
 
   --accent-blue: var(--violet);
   --accent-blue-dim: var(--violet-dim);
@@ -176,7 +176,7 @@ h2 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.1; }
 h3 { font-size: 20px; line-height: 1.25; }
 
 p { margin: 0 0 1em; color: var(--ink); }
-p.lede { font-size: 19px; color: #423b52; max-width: 640px; }
+p.lede { font-size: 19px; color: #3a4c54; max-width: 640px; }
 .muted { color: var(--muted); }
 
 .mono-tag { font-family: var(--font-mono); font-size: 11.5px; letter-spacing: 0.04em; color: var(--muted); }
@@ -416,40 +416,41 @@ footer.site-footer { border-top: 1px solid var(--rule-strong); padding: 40px 0; 
 .center-note { text-align: center; padding: 60px 0; color: var(--muted); }
 
 /* ============================================================
-   BANDE D'ILLUSTRATIONS DÉFILANTES — page d'accueil uniquement
+   BANNIÈRE STATIQUE — identité de l'équipe
    ============================================================ */
-.marquee-strip {
+.team-banner {
+  position: relative;
   overflow: hidden;
-  background: var(--paper-raised);
-  border-bottom: 1px solid var(--rule-strong);
-  padding: 18px 0;
+  background: linear-gradient(120deg, var(--blue) 0%, var(--violet) 60%, var(--amber) 130%);
+  padding: 56px 20px;
+  text-align: center;
+  color: #fff;
 }
-
-.marquee-track {
-  display: flex;
-  gap: 28px;
-  width: max-content;
-  animation: marqueeScroll 38s linear infinite;
+.team-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480' viewBox='0 0 480 480'%3E%3Ccircle cx='40' cy='40' r='1.4' fill='white' opacity='0.35'/%3E%3Ccircle cx='120' cy='90' r='1.4' fill='white' opacity='0.3'/%3E%3Ccircle cx='260' cy='50' r='1.4' fill='white' opacity='0.3'/%3E%3Ccircle cx='380' cy='120' r='1.4' fill='white' opacity='0.3'/%3E%3Ccircle cx='60' cy='220' r='1.4' fill='white' opacity='0.3'/%3E%3Ccircle cx='300' cy='260' r='1.4' fill='white' opacity='0.3'/%3E%3Ccircle cx='420' cy='300' r='1.4' fill='white' opacity='0.3'/%3E%3Ccircle cx='150' cy='340' r='1.4' fill='white' opacity='0.3'/%3E%3Cpath d='M0,260 C60,180 120,340 180,260 C240,180 300,340 360,260 C400,210 440,300 480,260' stroke='white' stroke-width='1.3' fill='none' opacity='0.22'/%3E%3Cpath d='M0,120 C60,60 120,180 180,120 C240,60 300,180 360,120 C400,80 440,160 480,120' stroke='white' stroke-width='1.1' fill='none' opacity='0.18'/%3E%3C/svg%3E");
+  background-size: 480px 480px;
 }
-
-.marquee-strip:hover .marquee-track { animation-play-state: paused; }
-
-.marquee-card {
-  flex: 0 0 auto;
-  width: 220px;
-  height: 140px;
-  border-radius: 12px;
-  overflow: hidden;
-  border: 1px solid var(--rule-strong);
-  background: #fff;
+.team-banner .inner { position: relative; z-index: 1; max-width: 860px; margin: 0 auto; }
+.team-banner .eyebrow2 {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.9;
+  margin-bottom: 14px;
 }
-.marquee-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
-@keyframes marqueeScroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
+.team-banner h2 {
+  color: #fff;
+  font-size: clamp(26px, 3.6vw, 40px);
+  line-height: 1.2;
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
+.team-banner .sub2 {
+  margin-top: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  opacity: 0.85;
 }
