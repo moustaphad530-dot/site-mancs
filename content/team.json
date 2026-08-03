@@ -31,6 +31,14 @@
       "field": "Mathématiques Modelling, Optimization, Biomathematics",
       "bio": "Utilisation des Equations aux Dérivées Partielles (EDP) pour la résolution des problèmes récurrents sur la santé.",
       "email": "omarab2005@yahoo.fr"
+    },
+    {
+      "id": "Chercheur - 4",
+      "name": "Kruoch Gael",
+      "role": "Enseignant-Chercheur",
+      "field": "Contrôle de la pollution atmosphérque",
+      "bio": "Docteur en Analyse Numérique et Calcul Scientifique",
+      "email": "kruoch_gael@yahoo.fr"
     }
   ]
 }
