@@ -1,36 +1,12 @@
 {
   "entries": [
     {
-      "id": "post-2026-06",
-      "date": "2026-06-15",
-      "title": "Le projet SCHEMES-HD obtient un financement de trois ans",
-      "excerpt": "Nous sommes heureux d'annoncer l'obtention d'un financement ANR pour poursuivre nos travaux sur les schémas numériques d'ordre élevé.",
-      "body": "Nous sommes heureux d'annoncer l'obtention d'un financement de l'Agence Nationale de la Recherche pour poursuivre le projet SCHEMES-HD sur les trois prochaines années. Ce financement permettra de recruter un doctorant supplémentaire et d'étendre nos collaborations avec d'autres équipes d'analyse numérique.",
-      "author": "L. Petit"
-    },
-    {
-      "id": "post-2026-04",
-      "date": "2026-04-02",
-      "title": "S. Girard présente ses travaux au congrès de probabilités appliquées",
-      "excerpt": "Notre doctorant a présenté ses résultats sur les méthodes de Monte-Carlo multi-niveaux devant la communauté internationale.",
-      "body": "S. Girard a présenté ses travaux de thèse lors du congrès international de probabilités appliquées. Sa présentation, consacrée aux méthodes de Monte-Carlo multi-niveaux pour les équations différentielles stochastiques, a suscité de nombreux échanges avec la communauté.",
-      "author": "S. Girard"
-    },
-    {
-      "id": "post-2025-11",
-      "date": "2025-11-20",
-      "title": "Ouverture d'un poste de chercheur postdoctoral en calcul scientifique",
-      "excerpt": "L'équipe recrute un·e chercheur·se postdoctoral·e en calcul scientifique haute performance pour rejoindre le projet HPC-EDP.",
-      "body": "Dans le cadre du projet HPC-EDP, l'équipe recrute un·e chercheur·se postdoctoral·e spécialisé·e en calcul scientifique haute performance. Le poste est à pourvoir dès janvier 2026. Voir la page Contact pour candidater.",
-      "author": "Dr. C. Lefèvre"
-    },
-    {
-      "id": "post-2025-09",
-      "date": "2025-09-10",
+      "id": "post-2025-01",
+      "date": "2025-02-05",
       "title": "Soutenance de thèse réussie pour un doctorant de l'équipe",
-      "excerpt": "Un premier doctorant de l'équipe a soutenu sa thèse sur le contrôle optimal des équations d'évolution.",
-      "body": "Dans le cadre du projet OPTICONTROL, un doctorant de l'équipe a soutenu avec succès sa thèse consacrée au contrôle optimal de systèmes gouvernés par des équations d'évolution non linéaires. Toute l'équipe le félicite pour ce travail.",
-      "author": "P. Rousseau"
+      "excerpt": "Un doctorant (Amadou Garba Abdourhamane) de l'équipe a soutenu sa thèse sur le contrôle optimal des équations d'évolution appliqué au Paludisme.",
+      "body": "Dans le cadre des ses activités, un doctorant de l'équipe a soutenu avec succès sa thèse consacrée au contrôle optimal de systèmes gouvernés par des équations d'évolution non linéaires. Toute l'équipe le félicite pour ce travail.",
+      "author": "Djibo. M"
     }
   ]
 }
