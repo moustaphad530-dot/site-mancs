@@ -83,6 +83,33 @@ collections:
               { name: room, label: "Salle", widget: string, required: false },
             ]}
 
+  - name: "mission"
+    label: "Notre mission"
+    files:
+      - name: "entries"
+        label: "Objectifs"
+        file: "content/mission.json"
+        fields:
+          - { name: entries, label: "Objectifs", widget: list, fields: [
+              { name: id, label: "Identifiant (unique)", widget: string },
+              { name: title, label: "Titre de l'objectif", widget: string },
+              { name: description, label: "Description", widget: text },
+            ]}
+
+  - name: "partners"
+    label: "Partenaires & financements"
+    files:
+      - name: "entries"
+        label: "Partenaires"
+        file: "content/partners.json"
+        fields:
+          - { name: entries, label: "Partenaires", widget: list, fields: [
+              { name: id, label: "Identifiant (unique)", widget: string },
+              { name: name, label: "Nom du partenaire", widget: string },
+              { name: url, label: "Site web (optionnel)", widget: string, required: false },
+              { name: logo, label: "Logo (optionnel)", widget: file, required: false, media_folder: "/images/partners", public_folder: "/images/partners", hint: "Image du logo, idéalement sur fond transparent ou blanc" },
+            ]}
+
   - name: "posts"
     label: "Actualités"
     files:

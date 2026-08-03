@@ -52,6 +52,7 @@ function escapeHTML(str) {
 async function renderHomePreviews() {
   const pubMount = document.getElementById("home-pub-preview");
   const postMount = document.getElementById("home-post-preview");
+  const teamMount = document.getElementById("home-team-preview");
   const teamCount = document.getElementById("stat-team-count");
   const pubCount = document.getElementById("stat-pub-count");
   const projCount = document.getElementById("stat-proj-count");
@@ -67,6 +68,24 @@ async function renderHomePreviews() {
     if (teamCount) teamCount.textContent = team.length;
     if (pubCount) pubCount.textContent = pubs.length;
     if (projCount) projCount.textContent = projects.filter((p) => p.status === "active").length;
+
+    if (teamMount) {
+      if (!team.length) {
+        teamMount.innerHTML = `<div class="empty-state">Aucun membre listé pour le moment.</div>`;
+      } else {
+        const preview = team.slice(0, 4);
+        teamMount.innerHTML = preview
+          .map(
+            (m) => `
+          <div class="card">
+            <div class="avatar">${initials(m.name)}</div>
+            <h3>${escapeHTML(m.name)}</h3>
+            <div class="mono-tag">${escapeHTML(m.role)}</div>
+          </div>`
+          )
+          .join("");
+      }
+    }
 
     if (pubMount) {
       const latest = [...pubs].sort((a, b) => b.year - a.year).slice(0, 3);
@@ -100,6 +119,62 @@ async function renderHomePreviews() {
         .join("");
     }
   } catch (e) {
+    console.error(e);
+  }
+}
+
+// ============================================================
+// Notre mission
+// ============================================================
+async function renderMission() {
+  const mount = document.getElementById("mission-grid");
+  if (!mount) return;
+  try {
+    const objectives = await loadJSON("content/mission.json");
+    if (!objectives.length) {
+      mount.innerHTML = `<div class="empty-state">Objectifs à venir — ajoutez-les depuis l'éditeur (/admin/ → Notre mission).</div>`;
+      return;
+    }
+    mount.innerHTML = objectives
+      .map(
+        (o) => `
+      <div class="card">
+        <h3>${escapeHTML(o.title)}</h3>
+        <p class="muted">${escapeHTML(o.description)}</p>
+      </div>`
+      )
+      .join("");
+  } catch (e) {
+    mount.innerHTML = `<div class="empty-state">Erreur de chargement des objectifs.</div>`;
+    console.error(e);
+  }
+}
+
+// ============================================================
+// Partenaires & financements
+// ============================================================
+async function renderPartners() {
+  const mount = document.getElementById("partners-grid");
+  if (!mount) return;
+  try {
+    const partners = await loadJSON("content/partners.json");
+    if (!partners.length) {
+      mount.innerHTML = `<div class="empty-state">Partenaires et financeurs à venir — ajoutez-les depuis l'éditeur (/admin/ → Partenaires &amp; financements).</div>`;
+      return;
+    }
+    mount.innerHTML = partners
+      .map((p) => {
+        const inner = `
+          ${p.logo ? `<img src="${escapeHTML(p.logo)}" alt="${escapeHTML(p.name)}" style="max-width:140px; max-height:56px; object-fit:contain; margin:0 auto 10px;" />` : ""}
+          <div class="mono-tag" style="text-align:center; font-weight:600;">${escapeHTML(p.name)}</div>
+        `;
+        return p.url
+          ? `<a href="${escapeHTML(p.url)}" target="_blank" rel="noopener" class="card" style="align-items:center; text-decoration:none;">${inner}</a>`
+          : `<div class="card" style="align-items:center;">${inner}</div>`;
+      })
+      .join("");
+  } catch (e) {
+    mount.innerHTML = `<div class="empty-state">Erreur de chargement des partenaires.</div>`;
     console.error(e);
   }
 }
@@ -270,4 +345,6 @@ document.addEventListener("DOMContentLoaded", () => {
   renderProjects();
   renderPosts();
   renderSeminars();
+  renderMission();
+  renderPartners();
 });

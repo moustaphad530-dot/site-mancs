@@ -1,0 +1,19 @@
+{
+  "entries": [
+    {
+      "id": "obj-1",
+      "title": "Faire progresser la théorie",
+      "description": "Produire des résultats rigoureux en analyse des équations aux dérivées partielles et en probabilités numériques, publiés et discutés avec la communauté scientifique."
+    },
+    {
+      "id": "obj-2",
+      "title": "Rendre les méthodes calculables",
+      "description": "Concevoir des schémas numériques robustes et les porter sur des architectures de calcul haute performance, pour que la théorie se traduise en résultats concrets."
+    },
+    {
+      "id": "obj-3",
+      "title": "Former la relève scientifique",
+      "description": "Accompagner doctorant·es et jeunes chercheur·euses à travers un encadrement suivi, des séminaires hebdomadaires et des collaborations académiques."
+    }
+  ]
+}
