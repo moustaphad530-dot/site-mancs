@@ -83,6 +83,17 @@ collections:
               { name: room, label: "Salle", widget: string, required: false },
             ]}
 
+  - name: "hero"
+    label: "Accueil — Titre principal"
+    files:
+      - name: "entries"
+        label: "Titre principal"
+        file: "content/hero.json"
+        fields:
+          - { name: eyebrow, label: "Petit texte au-dessus du titre", widget: string }
+          - { name: title, label: "Titre principal", widget: text }
+          - { name: lede, label: "Paragraphe d'introduction", widget: text }
+
   - name: "mission"
     label: "Notre mission"
     files:

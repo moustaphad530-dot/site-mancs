@@ -488,6 +488,26 @@ async function renderFocus() {
   }
 }
 
+// ============================================================
+// Titre principal de l'accueil (hero)
+// ============================================================
+async function renderHero() {
+  const eyebrowEl = document.getElementById("hero-eyebrow");
+  const titleEl = document.getElementById("hero-title");
+  const ledeEl = document.getElementById("hero-lede");
+  if (!eyebrowEl && !titleEl && !ledeEl) return;
+  try {
+    const res = await fetch("content/hero.json");
+    if (!res.ok) throw new Error("Impossible de charger content/hero.json");
+    const data = await res.json();
+    if (eyebrowEl) eyebrowEl.textContent = data.eyebrow || "";
+    if (titleEl) titleEl.textContent = data.title || "";
+    if (ledeEl) ledeEl.textContent = data.lede || "";
+  } catch (e) {
+    console.error(e);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderHomePreviews();
   renderTeam();
@@ -501,4 +521,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderStats();
   renderUpcomingEvents();
   renderFocus();
+  renderHero();
 });
