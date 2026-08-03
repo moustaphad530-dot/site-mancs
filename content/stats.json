@@ -1,6 +1,12 @@
 {
   "entries": [
     {
+      "id": "stat-0",
+      "label": "Chercheurs permanents",
+      "source": "team_keyword",
+      "keyword": "Directeur"
+    },
+    {
       "id": "stat-1",
       "label": "Chercheurs permanents",
       "source": "team_keyword",
