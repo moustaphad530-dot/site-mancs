@@ -376,22 +376,51 @@ async function renderArticle() {
 }
 
 // ============================================================
-// Quelques chiffres — éditable depuis l'éditeur
+// Quelques chiffres — libellés éditables, calcul automatique
 // ============================================================
 async function renderStats() {
   const mount = document.getElementById("stats-grid");
   if (!mount) return;
   try {
-    const stats = await loadJSON("content/stats.json");
-    if (!stats.length) {
+    const [statDefs, team, pubs, seminars, projects] = await Promise.all([
+      loadJSON("content/stats.json"),
+      loadJSON("content/team.json"),
+      loadJSON("content/publications.json"),
+      loadJSON("content/seminaires.json"),
+      loadJSON("content/projects.json"),
+    ]);
+
+    if (!statDefs.length) {
       mount.innerHTML = `<div class="empty-state">Chiffres à venir — ajoutez-les depuis l'éditeur (/admin/ → Quelques chiffres).</div>`;
       return;
     }
-    mount.innerHTML = stats
+
+    function computeNumber(def) {
+      switch (def.source) {
+        case "team_total":
+          return team.length;
+        case "team_keyword": {
+          const kw = (def.keyword || "").toLowerCase().trim();
+          if (!kw) return 0;
+          return team.filter((m) => (m.role || "").toLowerCase().includes(kw)).length;
+        }
+        case "pub_total":
+          return pubs.length;
+        case "seminar_total":
+          return seminars.length;
+        case "project_active":
+          return projects.filter((p) => p.status === "active").length;
+        case "manual":
+        default:
+          return def.manual_number || "0";
+      }
+    }
+
+    mount.innerHTML = statDefs
       .map(
         (s) => `
       <div class="stat-box">
-        <div class="num">${escapeHTML(s.number)}</div>
+        <div class="num">${computeNumber(s)}</div>
         <div class="lbl">${escapeHTML(s.label)}</div>
       </div>`
       )

@@ -92,8 +92,17 @@ collections:
         fields:
           - { name: entries, label: "Chiffres", widget: list, fields: [
               { name: id, label: "Identifiant (unique)", widget: string },
-              { name: number, label: "Nombre", widget: string },
-              { name: label, label: "Légende", widget: string },
+              { name: label, label: "Légende affichée", widget: string },
+              { name: source, label: "Calcul automatique", widget: select, options: [
+                  { label: "Total membres de l'équipe", value: "team_total" },
+                  { label: "Membres dont le rôle contient un mot-clé", value: "team_keyword" },
+                  { label: "Total publications", value: "pub_total" },
+                  { label: "Total séminaires programmés", value: "seminar_total" },
+                  { label: "Projets en cours", value: "project_active" },
+                  { label: "Nombre saisi manuellement", value: "manual" },
+                ]},
+              { name: keyword, label: "Mot-clé (uniquement si \"Membres dont le rôle contient un mot-clé\")", widget: string, required: false, hint: "Ex. doctorant, ingénieur, postdoc — la casse n'a pas d'importance" },
+              { name: manual_number, label: "Nombre (uniquement si \"Nombre saisi manuellement\")", widget: string, required: false },
             ]}
 
   - name: "banner"
