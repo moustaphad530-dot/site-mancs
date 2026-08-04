@@ -7,6 +7,14 @@
       "field": "Analyse des équations aux dérivées partielles",
       "bio": "Dirige l'équipe MANCS depuis 2010. Travaux sur l'existence et la stabilité des solutions d'EDP non linéaires.",
       "email": "bsaley@gmail.com"
+    },
+    {
+      "id": "Memb-01",
+      "name": "Badjo Kimba Abdoul Wahid",
+      "role": "Enseignant-chercheur",
+      "bio": "Chercheur en biomathématiques, spécialisé en modélisation mathématique des systèmes biologiques et épidémiologiques. À l’interface entre mathématiques, sciences du vivant et santé, je m’intéresse à l’analyse, la simulation et la compréhension des dynamiques complexes.",
+      "email": "abadjokimba@yahoo.fr",
+      "field": "Biomathématiques, modélisation mathématiques et système dynamiques appliqués aux sciences du vivant"
     }
   ]
 }
