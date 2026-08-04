@@ -7,38 +7,6 @@
       "field": "Analyse des équations aux dérivées partielles",
       "bio": "Dirige l'équipe MANCS depuis 2019. Travaux sur l'existence et la stabilité des solutions d'EDP non linéaires.",
       "email": "bsaley@gmail.com"
-    },
-    {
-      "id": "chercheur-1",
-      "name": "Pr BADE Rabé",
-      "role": "Enseignant-Chercheur",
-      "field": "Calcul scientifique haute performance",
-      "bio": "Conçoit des méthodes de volumes finis parallélisées pour la simulation d'écoulements sur grands maillages.",
-      "email": "baderabe@yahoo.fr"
-    },
-    {
-      "id": "Chercheur- 2",
-      "name": "Dr ABANI MADAOUA Ali",
-      "role": "Enseignant-Chercheur",
-      "field": "Analyse numérique",
-      "bio": "Thème sur les schémas d'ordre élevé pour les lois de conservation hyperboliques et l'utilisation des problèmes inverses.",
-      "email": "ali.abanimaidaoua@uddm.edu.ne"
-    },
-    {
-      "id": "Chercheur- 2",
-      "name": "Dr ABBA MAHAMANE Oumarou",
-      "role": "Enseignant-Chercheur, membre permanent",
-      "field": "Mathématiques Modelling, Optimization, Biomathematics",
-      "bio": "Utilisation des Equations aux Dérivées Partielles (EDP) pour la résolution des problèmes récurrents sur la santé.",
-      "email": "omarab2005@yahoo.fr"
-    },
-    {
-      "id": "Chercheur - 4",
-      "name": "Kruoch Gael",
-      "role": "Enseignant-Chercheur",
-      "field": "Contrôle de la pollution atmosphérque",
-      "bio": "Docteur en Analyse Numérique et Calcul Scientifique",
-      "email": "kruoch_gael@yahoo.fr"
     }
   ]
 }
