@@ -4,17 +4,17 @@
       "id": "post-2025-01",
       "date": "2025-02-05",
       "title": "Modèles Structurés en âge avec retard pour l'étude de quelques maladies infectieuses",
-      "excerpt": "Un doctorant (Amadou Garba Abdourhamane) de l'équipe a soutenu sa thèse sur Modèles Structurés en âge avec retard.",
+      "excerpt": "Un doctorant de l'équipe a soutenu sa thèse sur Modèles Structurés en âge avec retard.",
       "body": "Dans cette thèse, nous mettons en place des modèles qui tiennent compte des préoccupations communes de certaines maladies infectieuses. D'abord, le modèle de base répartit la population en cinq (5) catégories : une population vaccinée, une population saine et susceptible d'attraper la maladie, une population exposée où intervient la notion du retard, une population malade et une population guérie ou immunisée. Toute maladie qui répond à cette catégorisation est donc concernée par ces modèles. Dans un premier temps, nous avons proposé un modèle général VSEIRS que nous avons étalé par la suite sur deux patchs. Ensuite, nous avons fait l'étude du modèle SEIRS sans vaccination où nous avons amélioré les travaux de Zhe Yin et al en considérant les décès liés à la maladie et la mobilité de la population. Puis, nous avons appliqué spécifiquement le modèle SEIRS à la bilharziose. Après la formulation mathématique de ces modèles, nous vérifions l'existence, l'unicité et la positivité de la solution. Ensuite, nous déterminons le nombre de reproduction de base et les points d'équilibre sans maladie et endémique. Et enfin, nous nous attaquons aux complexes études de la stabilité des points d'équilibre pour des modèles avec retard. À la n de chaque étude nous faisons des simulations numériques avec le langage python pour vérifier la conformité de notre étude théorique avec les données réelles.",
-      "author": "DJIBO. M"
+      "author": "AMADOU GARBA Abdourhamane"
     },
     {
       "id": "post-2025-02",
       "date": "2025-02-06",
       "title": "Résolution et simulation numérique d’un modèle de pollution de l’atmosphère",
-      "excerpt": "Un autre doctorant du nom de KRUOCH Gael de l'équipe a soutenu sa thèse sur la pollution de l'atmosphère.",
+      "excerpt": "Un autre doctorant de l'équipe a soutenu sa thèse sur la pollution de l'atmosphère.",
       "body": "Cette thèse élabore un cadre mathématique rigoureux pour modéliser l’évolution spatiotemporelle des polluants atmosphériques. Fondé sur une équation de convection-diffusion avec réaction, le modèle est étudié dans une formulation variationnelle garantissant existence et unicité de la solution. La résolution numérique s’appuie sur la méthode des éléments finis et des simulations illustratives. Enfin, un problème de contrôle optimal est formulé afin de réduire la concentration des polluants. Les résultats attestent de la pertinence théorique et numérique de l’approche, ouvrant la voie à des applications concrètes en gestion environnementale.",
-      "author": "DJIBO Moustapha"
+      "author": "KRUOCH Gael"
     }
   ]
 }
