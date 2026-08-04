@@ -21,13 +21,6 @@
       "manual_number": ""
     },
     {
-      "id": "stat-4",
-      "label": "Ingénieur·es",
-      "source": "team_keyword",
-      "keyword": "ingénieur",
-      "manual_number": ""
-    },
-    {
       "id": "stat-5",
       "label": "Publications",
       "source": "pub_total",
