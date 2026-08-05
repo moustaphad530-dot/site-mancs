@@ -15,6 +15,22 @@
       "bio": "Chercheur en biomathématiques, spécialisé en modélisation mathématique des systèmes biologiques et épidémiologiques. À l’interface entre mathématiques, sciences du vivant et santé, je m’intéresse à l’analyse, la simulation et la compréhension des dynamiques complexes.",
       "email": "abadjokimba@yahoo.fr",
       "field": "Biomathématiques, modélisation mathématiques et système dynamiques appliqués aux sciences du vivant"
+    },
+    {
+      "id": "Memb-02",
+      "name": "Dr AMADOU GARBA Abdourahamane",
+      "role": "Enseignant chercheur",
+      "field": "Analyse numérique et calcul scientifique",
+      "bio": "Chercheur en mathématiques appliquées à l'épidémiologie, je travaille plus particulièrement sur les modèles structurés en âge avec retard.",
+      "email": "amdoudjallo@gmail.com"
+    },
+    {
+      "id": "Memb-03",
+      "name": "Dr KRUOCH Gael",
+      "role": "Enseignant Chercheur",
+      "field": "Analyse numérique et Calcul Scientifique",
+      "bio": "Chercheur en mathématiques appliquées, spécialisé en modélisation et étude mathématique de la pollution de l'atmosphère.",
+      "email": "kruoch_gael@yahoo.fr Received today at 2:00 PM from 2605:59c0:35b6:4408:8ca0:ea72:1445:960"
     }
   ]
 }
