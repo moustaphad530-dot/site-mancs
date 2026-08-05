@@ -9,6 +9,14 @@
       "email": "bsaley@gmail.com"
     },
     {
+      "id": "Memb-04",
+      "name": "Dr ABBA MAHAMANE Oumarou",
+      "role": "Enseignant-Chercheur",
+      "field": "Modélisation et simulation numérique des systèmes dynamiques",
+      "bio": "A travers les mathématiques, nous essayons d'apporter des réponses aux défis qui se posent à notre pays, au continent africain et au delà au monde entier.",
+      "email": "oumarou.abba@uam.edu.ne"
+    },
+    {
       "id": "Memb-01",
       "name": "Dr Badjo Kimba Abdoul Wahid",
       "role": "Enseignant-chercheur",
@@ -31,14 +39,6 @@
       "field": "Analyse numérique et Calcul Scientifique",
       "bio": "Chercheur en mathématiques appliquées, spécialisé en modélisation et étude mathématique de la pollution de l'atmosphère.",
       "email": "kruoch_gael@yahoo.fr Received today at 2:00 PM from 2605:59c0:35b6:4408:8ca0:ea72:1445:960"
-    },
-    {
-      "id": "Memb-04",
-      "name": "Dr ABBA MAHAMANE Oumarou",
-      "role": "Enseignant-Chercheur",
-      "field": "Modélisation et simulation numérique des systèmes dynamiques",
-      "bio": "A travers les mathématiques, nous essayons d'apporter des réponses aux défis qui se posent à notre pays, au continent africain et au delà au monde entier.",
-      "email": "oumarou.abba@uam.edu.ne"
     }
   ]
 }
