@@ -13,6 +13,16 @@
         "stability",
         "Simulation"
       ]
+    },
+    {
+      "id": "pub-2016-01",
+      "year": 2016,
+      "title": "NUMERICAL APPROACHFORSOLVING3D NAVIER-STOKESEQUATIONS",
+      "authors": "DJIBO MOUSTAPHA, ABANI MAIDAOUA ALI AND SALEYBISSO",
+      "venue": "Asian Journal of Mathematics and Computer Research",
+      "tags": [
+        "Mixed finite elements;characteristics method’s numerical simulation; Navier-Stokes equations."
+      ]
     }
   ]
 }
