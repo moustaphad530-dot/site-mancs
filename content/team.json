@@ -17,6 +17,14 @@
       "email": "oumarou.abba@uam.edu.ne"
     },
     {
+      "id": "Memb-05",
+      "name": "Dr HASSANE Abba Mallam",
+      "role": "Enseignant-Chercheur",
+      "field": "Statistique",
+      "bio": "Chercheur en mathématiques appliquées, nous nous intéressons aux modèles stochastiques appliquées à la finance, à l'analyse de durées de survie et les domaines connexes.",
+      "email": "lachimer2@gmail.com"
+    },
+    {
       "id": "Memb-01",
       "name": "Dr Badjo Kimba Abdoul Wahid",
       "role": "Enseignant-chercheur",
@@ -39,14 +47,6 @@
       "field": "Analyse numérique et Calcul Scientifique",
       "bio": "Chercheur en mathématiques appliquées, spécialisé en modélisation et étude mathématique de la pollution de l'atmosphère.",
       "email": "kruoch_gael@yahoo.fr"
-    },
-    {
-      "id": "Memb-05",
-      "name": "Dr HASSANE Abba Mallam",
-      "role": "Enseignant-Chercheur",
-      "field": "Statistique",
-      "bio": "Chercheur en mathématiques appliquées, nous nous intéressons aux modèles stochastiques appliquées à la finance, à l'analyse de durées de survie et les domaines connexes.",
-      "email": "lachimer2@gmail.com"
     }
   ]
 }
