@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "id": "these-1",
+      "title": "Contrôle optimal de systèmes gouvernés par des équations d'évolution non linéaires",
+      "author": "P. Rousseau",
+      "director": "Dr. C. Lefèvre",
+      "year": "2025",
+      "status": "soutenue",
+      "link": ""
+    },
+    {
+      "id": "these-2",
+      "title": "Schémas d'ordre élevé pour les lois de conservation hyperboliques",
+      "author": "L. Petit",
+      "director": "Dr. C. Lefèvre",
+      "year": "2027 (prévue)",
+      "status": "en_cours",
+      "link": ""
+    }
+  ]
+}

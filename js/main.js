@@ -536,6 +536,73 @@ async function renderBanner() {
   }
 }
 
+// ============================================================
+// Thèses et Mémoires — listes à onglets
+// ============================================================
+function renderTabbedList(entries, mountPrefix, statusKeys) {
+  statusKeys.forEach((status) => {
+    const mount = document.getElementById(`${mountPrefix}-${status}`);
+    if (!mount) return;
+    const filtered = entries.filter((e) => e.status === status);
+    if (!filtered.length) {
+      mount.innerHTML = `<div class="empty-state">Aucune entrée pour le moment.</div>`;
+      return;
+    }
+    mount.innerHTML = filtered
+      .map(
+        (e) => `
+      <div class="pub-item">
+        <div class="idx">${escapeHTML(e.year)}</div>
+        <div>
+          <h3>${escapeHTML(e.title)}</h3>
+          <div class="meta">${escapeHTML(e.author)} — dirigé·e par ${escapeHTML(e.director)}</div>
+          ${e.link && e.link !== "" ? `<a class="link-arrow" href="${escapeHTML(e.link)}" target="_blank" rel="noopener" style="margin-top:6px; display:inline-block;">Lire →</a>` : ""}
+        </div>
+      </div>`
+      )
+      .join("");
+  });
+}
+
+function initTabs() {
+  document.querySelectorAll(".tab-switch").forEach((switchEl) => {
+    const buttons = switchEl.querySelectorAll(".tab-btn");
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const tab = btn.dataset.tab;
+        buttons.forEach((b) => {
+          b.classList.toggle("active", b === btn);
+          b.setAttribute("aria-selected", b === btn ? "true" : "false");
+        });
+        const container = switchEl.parentElement;
+        container.querySelectorAll(".tab-panel").forEach((panel) => {
+          panel.classList.toggle("active", panel.id.endsWith(`-${tab}`));
+        });
+      });
+    });
+  });
+}
+
+async function renderTheses() {
+  if (!document.getElementById("theses-soutenue")) return;
+  try {
+    const theses = await loadJSON("content/theses.json");
+    renderTabbedList(theses, "theses", ["soutenue", "en_cours"]);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
+async function renderMemoires() {
+  if (!document.getElementById("memoires-encadre")) return;
+  try {
+    const memoires = await loadJSON("content/memoires.json");
+    renderTabbedList(memoires, "memoires", ["encadre", "en_cours"]);
+  } catch (e) {
+    console.error(e);
+  }
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderHomePreviews();
   renderTeam();
@@ -551,4 +618,7 @@ document.addEventListener("DOMContentLoaded", () => {
   renderFocus();
   renderHero();
   renderBanner();
+  initTabs();
+  renderTheses();
+  renderMemoires();
 });

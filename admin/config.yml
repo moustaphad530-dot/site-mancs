@@ -168,6 +168,40 @@ collections:
               { name: link, label: "Lien (ex. publications.html)", widget: string },
             ]}
 
+  - name: "theses"
+    label: "Thèses"
+    files:
+      - name: "entries"
+        label: "Thèses"
+        file: "content/theses.json"
+        fields:
+          - { name: entries, label: "Thèses", widget: list, fields: [
+              { name: id, label: "Identifiant (unique)", widget: string },
+              { name: title, label: "Sujet de la thèse", widget: string },
+              { name: author, label: "Doctorant·e", widget: string },
+              { name: director, label: "Directeur·rice de thèse", widget: string },
+              { name: year, label: "Année (ou \"en cours\", \"prévue 2027\"...)", widget: string },
+              { name: status, label: "Statut", widget: select, options: ["soutenue", "en_cours"] },
+              { name: link, label: "PDF (optionnel)", widget: file, required: false, media_folder: "/files", public_folder: "/files" },
+            ]}
+
+  - name: "memoires"
+    label: "Mémoires"
+    files:
+      - name: "entries"
+        label: "Mémoires"
+        file: "content/memoires.json"
+        fields:
+          - { name: entries, label: "Mémoires", widget: list, fields: [
+              { name: id, label: "Identifiant (unique)", widget: string },
+              { name: title, label: "Sujet du mémoire", widget: string },
+              { name: author, label: "Étudiant·e", widget: string },
+              { name: director, label: "Encadrant·e", widget: string },
+              { name: year, label: "Année (ou \"en cours\"...)", widget: string },
+              { name: status, label: "Statut", widget: select, options: ["encadre", "en_cours"] },
+              { name: link, label: "PDF (optionnel)", widget: file, required: false, media_folder: "/files", public_folder: "/files" },
+            ]}
+
   - name: "posts"
     label: "Actualités"
     files:

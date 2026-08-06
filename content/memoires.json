@@ -1,0 +1,22 @@
+{
+  "entries": [
+    {
+      "id": "memoire-1",
+      "title": "Introduction aux méthodes de volumes finis",
+      "author": "À renseigner",
+      "director": "M. Benatia",
+      "year": "2025",
+      "status": "encadre",
+      "link": ""
+    },
+    {
+      "id": "memoire-2",
+      "title": "Modélisation stochastique appliquée à la propagation d'épidémies",
+      "author": "À renseigner",
+      "director": "S. Girard",
+      "year": "2026",
+      "status": "en_cours",
+      "link": ""
+    }
+  ]
+}
