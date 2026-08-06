@@ -2,19 +2,19 @@
   "entries": [
     {
       "id": "these-1",
-      "title": "Contrôle optimal de systèmes gouvernés par des équations d'évolution non linéaires",
-      "author": "P. Rousseau",
-      "director": "Dr. C. Lefèvre",
-      "year": "2025",
+      "title": "Modélisation, résolution et simulation numériques d'un problème de contrôle optimal de la pollution des eaux de surface",
+      "author": "DJIBO Moustapha",
+      "director": "Pr SALEY Bisso",
+      "year": "2018",
       "status": "soutenue",
       "link": ""
     },
     {
       "id": "these-2",
-      "title": "Schémas d'ordre élevé pour les lois de conservation hyperboliques",
-      "author": "L. Petit",
-      "director": "Dr. C. Lefèvre",
-      "year": "2027 (prévue)",
+      "title": "ANALYSE MATHÉMATIQUE, RÉSOLUTION ET SIMULATION NUMÉRIQUES D'UN MODÈLE DE RÉCOLTE BASÉ SUR LES RESSOURCES AVEC CROISSANCE NON LINÉAIRE",
+      "author": "Y. M. Bassirou",
+      "director": "Pr SALEY Bisso",
+      "year": "Juin 2028 (prévue)",
       "status": "en_cours",
       "link": ""
     }
