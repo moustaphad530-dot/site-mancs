@@ -47,6 +47,14 @@
       "field": "Analyse numérique et Calcul Scientifique",
       "bio": "Chercheur en mathématiques appliquées, spécialisé en modélisation et étude mathématique de la pollution de l'atmosphère.",
       "email": "kruoch_gael@yahoo.fr"
+    },
+    {
+      "id": "Memb-06",
+      "name": "BADE Rabé",
+      "role": "Enseignant-Chercheur, Maître de Conférences",
+      "field": "Modélisation mathématique d'écoulement diphasique, équation de Navier-Stokes, système hyperbolique, théorie cinétique, méthode des volumes finis",
+      "bio": "Je suis enseignant chercheur à l'université Abdou Moumouni de Niamey et je m'intéresse aux EDP ayant trait à la mécanique des fluides et à leur approximation numérique.",
+      "email": "rabe.bade@uam.edu.ne"
     }
   ]
 }
