@@ -15,8 +15,13 @@
     },
     {
       "id": "stat-7",
-      "label": "Thèses soutenus",
+      "label": "Thèses soutenues",
       "source": "these_soutenue"
+    },
+    {
+      "id": "stat-8",
+      "label": "Thèses en cours",
+      "source": "these_en_cours"
     },
     {
       "id": "stat-3",
@@ -38,11 +43,6 @@
       "source": "seminar_total",
       "keyword": "",
       "manual_number": ""
-    },
-    {
-      "id": "stat-8",
-      "label": "Thèses en cours",
-      "source": "these_en_cours"
     }
   ]
 }
