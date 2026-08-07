@@ -17,6 +17,14 @@
       "year": "Juin 2028 (prévue)",
       "status": "en_cours",
       "link": ""
+    },
+    {
+      "id": "these-3",
+      "title": "Résolution des problèmes inverses des équations aux dérivées partielles non linéaires par les techniques d'assimilation variationnelle des données",
+      "author": "ABANI MAIDAWA Ali",
+      "director": "Pr SALEY Bisso",
+      "year": "2013",
+      "status": "soutenue"
     }
   ]
 }
