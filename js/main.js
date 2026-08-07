@@ -382,12 +382,14 @@ async function renderStats() {
   const mount = document.getElementById("stats-grid");
   if (!mount) return;
   try {
-    const [statDefs, team, pubs, seminars, projects] = await Promise.all([
+    const [statDefs, team, pubs, seminars, projects, theses, memoires] = await Promise.all([
       loadJSON("content/stats.json"),
       loadJSON("content/team.json"),
       loadJSON("content/publications.json"),
       loadJSON("content/seminaires.json"),
       loadJSON("content/projects.json"),
+      loadJSON("content/theses.json"),
+      loadJSON("content/memoires.json"),
     ]);
 
     if (!statDefs.length) {
@@ -410,6 +412,18 @@ async function renderStats() {
           return seminars.length;
         case "project_active":
           return projects.filter((p) => p.status === "active").length;
+        case "these_total":
+          return theses.length;
+        case "these_soutenue":
+          return theses.filter((t) => t.status === "soutenue").length;
+        case "these_en_cours":
+          return theses.filter((t) => t.status === "en_cours").length;
+        case "memoire_total":
+          return memoires.length;
+        case "memoire_encadre":
+          return memoires.filter((m) => m.status === "encadre").length;
+        case "memoire_en_cours":
+          return memoires.filter((m) => m.status === "en_cours").length;
         case "manual":
         default:
           return def.manual_number || "0";
