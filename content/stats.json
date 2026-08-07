@@ -33,6 +33,11 @@
       "source": "seminar_total",
       "keyword": "",
       "manual_number": ""
+    },
+    {
+      "id": "stat-7",
+      "label": "Thèses soutenus",
+      "source": "these_soutenue"
     }
   ]
 }
