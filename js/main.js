@@ -195,7 +195,7 @@ async function renderTeam() {
       .map(
         (m) => `
       <div class="card">
-        <div class="avatar">${initials(m.name)}</div>
+        ${m.photo && m.photo !== "" ? `<img src="${escapeHTML(m.photo)}" alt="${escapeHTML(m.name)}" class="avatar-photo" />` : `<div class="avatar">${initials(m.name)}</div>`}
         <h3>${escapeHTML(m.name)}</h3>
         <div class="mono-tag">${escapeHTML(m.role)}</div>
         <div class="mono-tag" style="color: var(--accent-blue)">${escapeHTML(m.field)}</div>

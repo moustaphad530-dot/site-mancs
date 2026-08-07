@@ -299,6 +299,16 @@ p.lede { font-size: 19px; color: #3a4c54; max-width: 640px; }
   margin-bottom: 6px;
 }
 
+.avatar-photo {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 6px;
+  border: 2px solid var(--paper-raised);
+  box-shadow: 0 0 0 1px var(--rule-strong);
+}
+
 .status-pill {
   align-self: flex-start;
   font-family: var(--font-mono);

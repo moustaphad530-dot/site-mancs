@@ -30,6 +30,7 @@ collections:
               { name: field, label: "Domaine de recherche", widget: string },
               { name: bio, label: "Bio courte", widget: text },
               { name: email, label: "E-mail", widget: string },
+              { name: photo, label: "Photo (optionnel — sinon, initiales affichées automatiquement)", widget: file, required: false, media_folder: "/images/team", public_folder: "/images/team" },
             ]}
 
   - name: "publications"
