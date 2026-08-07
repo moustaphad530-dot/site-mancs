@@ -1,6 +1,14 @@
 {
   "entries": [
     {
+      "id": "these-3",
+      "title": "Résolution des problèmes inverses des équations aux dérivées partielles non linéaires par les techniques d'assimilation variationnelle des données",
+      "author": "ABANI MAIDAWA Ali",
+      "director": "Pr SALEY Bisso",
+      "year": "2013",
+      "status": "soutenue"
+    },
+    {
       "id": "these-1",
       "title": "Modélisation, résolution et simulation numériques d'un problème de contrôle optimal de la pollution des eaux de surface",
       "author": "DJIBO Moustapha",
@@ -17,14 +25,6 @@
       "year": "Juin 2028 (prévue)",
       "status": "en_cours",
       "link": ""
-    },
-    {
-      "id": "these-3",
-      "title": "Résolution des problèmes inverses des équations aux dérivées partielles non linéaires par les techniques d'assimilation variationnelle des données",
-      "author": "ABANI MAIDAWA Ali",
-      "director": "Pr SALEY Bisso",
-      "year": "2013",
-      "status": "soutenue"
     }
   ]
 }
