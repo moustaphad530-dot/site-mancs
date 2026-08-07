@@ -14,6 +14,11 @@
       "manual_number": ""
     },
     {
+      "id": "stat-7",
+      "label": "Thèses soutenus",
+      "source": "these_soutenue"
+    },
+    {
       "id": "stat-3",
       "label": "Doctorant·es",
       "source": "team_keyword",
@@ -35,9 +40,9 @@
       "manual_number": ""
     },
     {
-      "id": "stat-7",
-      "label": "Thèses soutenus",
-      "source": "these_soutenue"
+      "id": "stat-8",
+      "label": "Thèses en cours",
+      "source": "these_en_cours"
     }
   ]
 }
