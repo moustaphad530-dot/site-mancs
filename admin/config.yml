@@ -108,7 +108,7 @@ collections:
                   { label: "Mémoires en cours", value: "memoire_en_cours" },
                   { label: "Nombre saisi manuellement", value: "manual" },
                 ]},
-              { name: keyword, label: "Mot-clé (uniquement si \"Membres dont le rôle contient un mot-clé\")", widget: string, required: false, hint: "Ex. doctorant, ingénieur, postdoc — la casse n'a pas d'importance" },
+              { name: keyword, label: "Mot(s)-clé(s) (uniquement si \"Membres dont le rôle contient un mot-clé\")", widget: string, required: false, hint: "Un ou plusieurs mots séparés par une virgule — ex. \"directeur, enseignant\" comptera les deux. La casse n'a pas d'importance." },
               { name: manual_number, label: "Nombre (uniquement si \"Nombre saisi manuellement\")", widget: string, required: false },
             ]}
 

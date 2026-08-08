@@ -402,9 +402,15 @@ async function renderStats() {
         case "team_total":
           return team.length;
         case "team_keyword": {
-          const kw = (def.keyword || "").toLowerCase().trim();
-          if (!kw) return 0;
-          return team.filter((m) => (m.role || "").toLowerCase().includes(kw)).length;
+          const keywords = (def.keyword || "")
+            .split(",")
+            .map((k) => k.toLowerCase().trim())
+            .filter(Boolean);
+          if (!keywords.length) return 0;
+          return team.filter((m) => {
+            const role = (m.role || "").toLowerCase();
+            return keywords.some((kw) => role.includes(kw));
+          }).length;
         }
         case "pub_total":
           return pubs.length;
