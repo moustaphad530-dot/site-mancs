@@ -26,6 +26,14 @@
       "email": "oumarou.abba@uam.edu.ne"
     },
     {
+      "id": "Memb-07",
+      "name": "Dr HAMIDOU Haoua",
+      "role": "Enseignante-Chercheure",
+      "field": "Mathématiques Appliquées à la physique. Modélisation, méthodes approchées",
+      "bio": "Enseignante chercheure a l'UAM. Titulaire d'un PhD en mathématiques et physique. Mathématiques appliquées dans les écoles d'ingénieurs. Spécialité: mécanique du solide déformable",
+      "email": "hamidou_haoua@yahoo.com"
+    },
+    {
       "id": "Memb-05",
       "name": "Dr HASSANE Abba Mallam",
       "role": "Enseignant-Chercheur",
@@ -56,14 +64,6 @@
       "field": "Analyse numérique et Calcul Scientifique",
       "bio": "Chercheur en mathématiques appliquées, spécialisé en modélisation et étude mathématique de la pollution de l'atmosphère.",
       "email": "kruoch_gael@yahoo.fr"
-    },
-    {
-      "id": "Memb-07",
-      "name": "Dr HAMIDOU Haoua",
-      "role": "Enseignante-Chercheure",
-      "field": "Mathématiques Appliquées à la physique. Modélisation, méthodes approchées",
-      "bio": "Enseignante chercheure a l'UAM. Titulaire d'un PhD en mathématiques et physique. Mathématiques appliquées dans les écoles d'ingénieurs. Spécialité: mécanique du solide déformable",
-      "email": "hamidou_haoua@yahoo.com"
     }
   ]
 }
